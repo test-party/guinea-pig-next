@@ -12,13 +12,30 @@ export default function Headings() {
             <p>This is a paragraph..</p>
 
             <div>
-                <h4>Heading 4..</h4>
-                <h6>Heading 6..</h6>
-                <p>This is a paragraph...</p>
+                <div>
+                    <h2>This is a Heading 2</h2>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <h4>Theese is a Card Title</h4>
+                        <p>This is the description</p>
+                    </div>
+                    <div>
+                        <h4>Theese is a Card Title</h4>
+                        <p>This is the description</p>
+                    </div>
+                    <div>
+                        <h4>Theese is a Card Title</h4>
+                        <p>This is the description</p>
+                    </div>
+                </div>
             </div>
             
             <h2>Heading 2...</h2>
-            <p>This is a paragraph...</p>
+            <p>This is a paragraph.....</p>
         </div>
     );
 }
