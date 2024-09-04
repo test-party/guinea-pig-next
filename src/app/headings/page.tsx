@@ -20,15 +20,15 @@ export default function Headings() {
             <div>
                 <div>
                     <div>
-                        <h4>Theese is a Card Title</h4>
+                        <h4>This is a Card Title</h4>
                         <p>This is the description</p>
                     </div>
                     <div>
-                        <h4>Theese is a Card Title</h4>
+                        <h4>This is a Card Title</h4>
                         <p>This is the description</p>
                     </div>
                     <div>
-                        <h4>Theese is a Card Title</h4>
+                        <h4>This is a Card Title</h4>
                         <p>This is the description</p>
                     </div>
                 </div>
