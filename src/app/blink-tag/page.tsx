@@ -19,6 +19,7 @@ const Page = () => {
             <div>
                 <p>This is a paragraph with a <blink>blinking text</blink> inside it.</p>
             </div>
+            <blink>This is a blinking text with a <blink>blinking text</blink> inside it.</blink>
         </div>
     );
 };   
