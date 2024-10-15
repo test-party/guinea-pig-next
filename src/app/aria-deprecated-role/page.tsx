@@ -30,6 +30,35 @@ export default function Page() {
               </li>
           </ul>
       </div>
+
+      <div role="directory" className="randomClassName">
+          <p>ABC</p>
+      </div>
+
+      <div className="randomClassName" style={{ color: 'red' }} role="directory">
+          <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+          </ul>
+      </div>
+
+      <div role="directory" className="randomClassName" style={{ color: 'red' }}>
+          <ul>
+              <li>Parent Item 1
+              <ul>
+                  <li>Child Item 1</li>
+                  <li>Child Item 2</li>
+              </ul>
+              </li>
+              <li>Parent Item 2
+              <ul>
+                  <li>Child Item 3</li>
+                  <li>Child Item 4</li>
+              </ul>
+              </li>
+          </ul>
+      </div>
     </div>
   );
 }
