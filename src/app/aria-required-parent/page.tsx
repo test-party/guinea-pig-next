@@ -6,11 +6,14 @@ export default function Page() {
   return (
     <body>
       <ul id="myaccount">
-        <li>
-          <p role="menuitem">Profile</p>
+        <li role="menuitem">
+          Bacon
         </li>
-        <li>
-          <p role="menuitem">Preferences</p>
+        <li role="menuitem">
+          Egg
+        </li>
+        <li role="menuitem">
+          Cheese
         </li>
       </ul>
     </body>
