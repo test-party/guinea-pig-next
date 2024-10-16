@@ -7,31 +7,20 @@ export default function Page() {
             </div>
 
             <div>
-                <button>Button 3</button>
+                <p aria-checked="true">ABC</p>
+                <p aria-checked="true">ABC</p>
+
+
             </div>
 
             <div>
-                <div role="tablist">
-                    <button>Button 1</button>
-                </div>
+                <button aria-expanded="true">ABC</button>
+                <button aria-expanded="false">ABC</button>
+
             </div>
 
-            <div>
-                <div role="tree">
-                    <div role="treeitem" aria-expanded="true">Parent Item 1
-                        <div role="group">
-                            <div role="treeitem">Child Item 1</div>
-                            <div role="treeitem">Child Item 2</div>
-                        </div>
-                    </div>
-                    <div role="treeitem" aria-expanded="true">Parent Item 2
-                        <div role="group">
-                            <div role="treeitem">Child Item 3</div>
-                            <div role="treeitem">Child Item 4</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <input type="text" aria-pressed="true" />
+            <input type="text" aria-pressed="true" />
         </div>
     );
 }
