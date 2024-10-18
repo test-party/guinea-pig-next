@@ -7,6 +7,8 @@ export default function Page() {
       <div role="meter" id="albmissing" aria-labelledby="nonexistent"></div>
       <div role="meter" id="albempty" aria-labelledby="emptydiv"></div>
       <div id="emptydiv"></div>
+      <div role="meter" id="valid-label-meter"></div>
+      <div id="valid">Valid Label</div>
     </body>
   );
   }
