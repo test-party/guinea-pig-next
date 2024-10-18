@@ -133,15 +133,19 @@ export default function AllTests() {
           <li>Invalid P</li>
         </ul>
       </div>
-      <header role="generic" aria-label="header">
-      </header>
+      <header role="generic" aria-label="header"></header>
       <div>
         <h1>My Page</h1>
         <span aria-label="span">test</span>
         <a aria-label="a">dsadasd</a>
-        <span aria-label="span" role="alert">test</span>
-        <p>test <br aria-label="br"/>sdasd</p>
-        <link aria-label="link"/>
+        <span aria-label="span" role="alert">
+          test
+        </span>
+        <p>
+          test <br aria-label="br" />
+          sdasd
+        </p>
+        <link aria-label="link" />
         <input type="radio" aria-checked="true"></input>
         <input type="hidden" aria-label="hidden"></input>
         <input type="range" aria-valuemax={200} aria-valuemin={1}></input>
@@ -151,9 +155,12 @@ export default function AllTests() {
         <option aria-selected="true">test</option>
         <img aria-selected="true"></img>
         <img aria-hidden="false"></img>
+        <div role="combobox" aria-expanded="true" aria-controls=""></div>
+        <div role="combobox" aria-expanded="true"></div>
+        <div role="combobox" aria-controls=""></div>
+        <div role="combobox"></div>
         <div role="switch"></div>
         <div role="checkbox"></div>
-        <div role="combobox"></div>
         <div role="menuitemcheckbox"></div>
         <div role="menuitemcheckbox"></div>
         <div role="menuitemradio"></div>
@@ -174,16 +181,24 @@ export default function AllTests() {
       <div>
         <div role="rowgroup">
           <div>
-            <div role="cell">This Cell has rowgroup, needs row in between and rowgroup's parent options</div>
+            <div role="cell">
+              This Cell has rowgroup, needs row in between and rowgroup's parent
+              options
+            </div>
           </div>
         </div>
       </div>
       <div>
         <div>
-          <div role="cell">This is Cell 1, it needs row and row's parent options</div>
+          <div role="cell">
+            This is Cell 1, it needs row and row's parent options
+          </div>
         </div>
         <div>
-          <div>This is supposed to be cell under row.  It should be remediated as part of Cell 1's remediation</div>
+          <div>
+            This is supposed to be cell under row. It should be remediated as
+            part of Cell 1's remediation
+          </div>
         </div>
       </div>
       <div>
