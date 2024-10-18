@@ -15,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    (<html
+      lang="en"
+      component-id="cdb677f3-3c39-408e-9442-b819188e8803"
+      testparty-id={crypto.randomUUID()}>
       {children}
-    </html>
-  )
+    </html>)
+  );
 }
