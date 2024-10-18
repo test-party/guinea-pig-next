@@ -23,6 +23,15 @@ export default function Page() {
       </div>
 
       <div>
+        <div>
+          <div role="cell">This is a Cell in row 1</div>
+        </div>
+        <div>
+          <div>This is supposed to be a Cell in row 2</div>
+        </div>
+      </div>
+
+      <div>
         <div role="listitem">Bacon</div>
         <div>Egg</div>
         <div>Cheese</div>
