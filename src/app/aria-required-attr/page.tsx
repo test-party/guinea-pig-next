@@ -5,9 +5,12 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Page() {
   return (
     <body className={inter.className}> 
+      <div role="combobox" aria-expanded="true" aria-controls=""></div>
+      <div role="combobox" aria-expanded="true"></div>
+      <div role="combobox" aria-controls=""></div>
+      <div role="combobox" ></div>
       <div role="switch"></div>
       <div role="checkbox"></div>
-      <div role="combobox"></div>
       <div role="menuitemcheckbox"></div>
       <div role="menuitemcheckbox"></div>
       <div role="menuitemradio"></div>
@@ -16,4 +19,4 @@ export default function Page() {
       <div role="slider"></div>
     </body>
   );
-} 
+}   
