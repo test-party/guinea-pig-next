@@ -8,9 +8,8 @@ for (var i = 0; i < 39; i++) {
 }
 
 export default function AllTests() {
- 
   return (
-    <body aria-hidden="true">
+    <body>
       <h1>My page</h1>
       <div style={{ width: "100%", maxHeight: "200px" }}>
         <audio controls>
@@ -39,58 +38,6 @@ export default function AllTests() {
         <blink>This is another blinking text</blink>
       </div>
       <div>
-        <h1>Heading 1.</h1>
-        <h2>Heading 2.</h2>
-        <p>This is a paragraph.</p>
-
-        <h2>Heading 2..</h2>
-        <h4>Heading 4.</h4>
-        <h5>Heading 5.</h5>
-        <h6>Heading 6.</h6>
-        <p>This is a paragraph..</p>
-
-        <div>
-          <div>
-            <h2>This is a Heading 2</h2>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <div>
-              <h4>This is a Card Title</h4>
-              <p>This is the description</p>
-            </div>
-            <div>
-              <h4>This is a Card Title</h4>
-              <p>This is the description</p>
-            </div>
-            <div>
-              <h4>This is a Card Title</h4>
-              <p>This is the description</p>
-            </div>
-          </div>
-        </div>
-
-        <h2>Heading 2...</h2>
-        <p>This is a paragraph.....</p>
-      </div>
-
-      <div style={{ width: "100%" }}>
-        {ids.map((id) => {
-          return (
-            <div>
-              <img
-                className="object-fill w-full h-full"
-                key={id}
-                src={`https://picsum.photos/id/${id}/200/300`}
-              ></img>
-            </div>
-          );
-        })}
-      </div>
-        
-      <div>
         <ul>
           <li>Raindrops on roses</li>
           <li>Whiskers on kittens</li>
@@ -108,33 +55,29 @@ export default function AllTests() {
         </ul>
       </div>
       <div>
-        <OnInput36/>
+        <OnInput36 />
       </div>
       <div>
-        <OnInput37/>
+        <OnInput37 />
       </div>
       <div>
         <ul>
           <li>Raindrops on roses</li>
-          <div>
-            <p>Hello</p>
-          </div>
+
           <li>Whiskers on kittens</li>
           <li>Bright copper kettles</li>
           <li>Warm woolen mittens</li>
           <li>Brown paper packages tied up with strings</li>
           <li>Cream colored ponies</li>
           <li>Crisp apple streudels</li>
-          <p>Hello</p>
+
           <li>Doorbells and sleigh bells</li>
           <li>Schnitzel with noodles</li>
           <li>Wild geese that fly with the moon on their wings</li>
           <li>Girls in white dresses with blue satin sashes</li>
           <li>Snowflakes that stay on my nose and eyelashes</li>
           <li>Silver white winters that melt into springs</li>
-          <ul>
-            <p></p>
-          </ul>
+          <ul></ul>
         </ul>
       </div>
       <div>
@@ -142,37 +85,132 @@ export default function AllTests() {
           <li>Valid Item 1</li>
           <li>Valid Item 2</li>
         </ul>
-        <li>Invalid A</li>
-        <li>Invalid B</li>
-        <li>Invalid C</li>
+        <ul>
+          <li>Invalid A</li>
+          <li>Invalid B</li>
+          <li>Invalid C</li>
+        </ul>
         <p>a</p>
-        <li>Invalid D</li>
-        {/* This is a comment */}
-        <li>Invalid E</li>
+        <ul>
+          <li>Invalid D</li>
+          {/* This is a comment */}
+          <li>Invalid E</li>
+        </ul>
         <p></p>
-        <li>Invalid F</li>
+        <ul>
+          <li>Invalid F</li>
 
-        <li>Invalid G</li>
+          <li>Invalid G</li>
+        </ul>
         <div>
-          <li>Invalid H</li>
-          <li>Invalid I</li>
-          <li>Invalid J</li>
+          <ul>
+            <li>Invalid H</li>
+            <li>Invalid I</li>
+            <li>Invalid J</li>
+          </ul>
         </div>
         <div>
-          <li></li>
-          <li>Invalid K</li>
+          <ul>
+            <li></li>
+            <li>Invalid K</li>
+          </ul>
         </div>
-        <li>Invalid L</li>
+        <ul>
+          <li>Invalid L</li>
+        </ul>
         <div>
-          <li>List Item I</li>
-          <li>List Item II</li>
-          <li>List Item III</li>
+          <ul>
+            <li>List Item I</li>
+            <li>List Item II</li>
+            <li>List Item III</li>
+          </ul>
         </div>
-        <li>Invalid M</li>
+        <ul>
+          <li>Invalid M</li>
 
-        <li>Invalid N</li>
-        <li>Invalid O</li>
-        <li>Invalid P</li>
+          <li>Invalid N</li>
+          <li>Invalid O</li>
+          <li>Invalid P</li>
+        </ul>
+      </div>
+      <header role="generic" aria-label="header">
+      </header>
+      <div>
+        <h1>My Page</h1>
+        <span aria-label="span">test</span>
+        <a aria-label="a">dsadasd</a>
+        <span aria-label="span" role="alert">test</span>
+        <p>test <br aria-label="br"/>sdasd</p>
+        <link aria-label="link"/>
+        <input type="radio" aria-checked="true"></input>
+        <input type="hidden" aria-label="hidden"></input>
+        <input type="range" aria-valuemax={200} aria-valuemin={1}></input>
+        <input type="text" list="" aria-haspopup="true"></input>
+        <input type="xxx" list="" aria-haspopup="true"></input>
+        <input list="" aria-haspopup="true"></input>
+        <option aria-selected="true">test</option>
+        <img aria-selected="true"></img>
+        <img aria-hidden="false"></img>
+        <div role="switch"></div>
+        <div role="checkbox"></div>
+        <div role="combobox"></div>
+        <div role="menuitemcheckbox"></div>
+        <div role="menuitemcheckbox"></div>
+        <div role="menuitemradio"></div>
+        <div role="radio"></div>
+        <div role="scrollbar"></div>
+        <div role="slider"></div>
+      </div>
+      <div>
+        <div>
+          <div role="cell">This Cell needs row and row's parent options</div>
+        </div>
+      </div>
+      <div>
+        <div role="row">
+          <div role="cell">This Cell has row, needs row's parent options</div>
+        </div>
+      </div>
+      <div>
+        <div role="rowgroup">
+          <div>
+            <div role="cell">This Cell has rowgroup, needs row in between and rowgroup's parent options</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div role="cell">This is Cell 1, it needs row and row's parent options</div>
+        </div>
+        <div>
+          <div>This is supposed to be cell under row.  It should be remediated as part of Cell 1's remediation</div>
+        </div>
+      </div>
+      <div>
+        <div role="caption">caption needs parent options</div>
+      </div>
+      <div>
+        <div role="treeitem">treeitem needs parent options</div>
+        <div>Should be treeitem</div>
+      </div>
+      <div>
+        <div role="option">option needs parent options</div>
+        <div>Should be Option</div>
+      </div>
+      <div>
+        <div role="menuitem">menuitem needs parent options</div>
+        <div>Should be menuitem</div>
+        <div>Should be menuitem</div>
+      </div>
+      <div>
+        <div role="listitem">listitem needs parent list</div>
+        <div>Should be listitem</div>
+        <div>Should be listitem</div>
+      </div>
+      <div>
+        <div role="tab">tab needs parent tablist</div>
+        <div>Should be tab</div>
+        <div>Should be tab</div>
       </div>
     </body>
   );
