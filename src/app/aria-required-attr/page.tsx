@@ -11,9 +11,11 @@ export default function Page() {
       <div role="combobox" ></div>
       <div role="switch"></div>
       <div role="checkbox"></div>
-      <div role="menuitemcheckbox"></div>
-      <div role="menuitemcheckbox"></div>
-      <div role="menuitemradio"></div>
+      <div role="menu">
+        <div role="menuitemcheckbox"></div>
+        <div role="menuitemcheckbox"></div>
+        <div role="menuitemradio"></div>
+      </div>
       <div role="radio"></div>
       <div role="scrollbar"></div>
       <div role="slider"></div>
