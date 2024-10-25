@@ -2,25 +2,28 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 //http://localhost:3000/aria-valid-attr
+//TESTS
+// 1 SIMILAR ATTRIBUTE
+// 2 SIMILAR ATTRIBUTE WHEN HAVE OTHER SIMILAR ATTRIBUTE OK
+// 3 SIMILAR ATTRIBUTE WHEN HAVE OTHER SIMILAR ATTRIBUTE NOT OK
+// 4 VALUE NOT VALID FOR A SIMILAR ATTRIBUTE
+// 5 NO VALUE
+// 6 NO SENSE NAME
+// 7 SUGGEST WHEN NUMBER
+// 8 PROHIBITED ATTRIBUTE SIMILAR
 export default function Page() {
   return (
     <body className={inter.className}> 
-      <button aria-lab="fdasdasdasalse"></button>
-      <button aria-lab="false"></button>
-      <button aria-hidd="false"></button>
-      <button aria-xxxx="sadddas"></button>
-      <button aria-yyyy="false"></button>
-      <button aria-tesxt="1"></button>
-      <button aria-false="false"></button>
-      <button aria-11111={1}></button>
-      <button aria-invalid="true"></button>
-      <button aria-busy="true"></button>
-      <button aria-checked="mixed"></button>
-      <button aria-expad="true"></button>
-      <button aria-hapup="menu"></button>
-      <button aria-hiden="true"></button>
-      <button aria-lal="Submit"></button>
-      <button aria-s="assertive"></button>
+      <button aria-lab="fdasdasdasalse"> BUTTON 1</button>
+      <button aria-lab="sdadsa" aria-labelledby='dsadas'> BUTTON 2</button>
+      <button aria-lab="sdadsa" aria-labi='dsadas'> BUTTON 3 </button>
+      <button aria-lae="false"> BUTTON 4 </button>
+      <button aria-lae=""> BUTTON 5 </button>
+      <button aria-dsadasdasdsadas=""> BUTTON 6 </button>
+      <div>
+        <input type="range" aria-val={0} aria-valu={100} />
+      </div>
+      <p aria-la="false">A</p>
     </body>
   );
 } 
