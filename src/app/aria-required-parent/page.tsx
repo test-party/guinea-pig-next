@@ -1,4 +1,4 @@
-//http://localhost:3001/aria-required-parent
+//http://localhost:3000/aria-required-parent
 export default function Page() {
   return (
     <body>
