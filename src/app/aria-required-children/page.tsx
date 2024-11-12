@@ -1,11 +1,9 @@
 const Page = () => {
     return (
         <div id="a" role="table">
-            <div id="b">
+            <div id="b" role="rowgroup | row">
                 <div id="c">CELL</div>
-            </div>
-            <div id="d">
-                <div id="e">CELL</div>
+            </div>LL</div>
             </div>
         </div>
     );
