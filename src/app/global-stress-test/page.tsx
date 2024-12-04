@@ -28,7 +28,7 @@ export default function GlobalStressTest() {
             />
             </div></div>
             {true && <div id="custom-test-global-case-13">INITIAL CODE</div>}
-            {[1,2,3].map((_,index) => <div id={`custom-test-global-case-14-${index}`}>INITIAL CODE</div>)}
+            {[1,2,3].map((_,index) => <div key={`key${index}`}id={`custom-test-global-case-14-${index}`}>INITIAL CODE</div>)}
             <div id="custom-test-global-case-15">INITIAL CODE</div>
         </div>
     )
