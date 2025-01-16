@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Page() {
   return (
     <body className={inter.className}>
-      <div role="grid" aria-colcount="3">
+      <div role="grid">
         <div role="row">
           <div role="gridcell">Cell 1</div>
         </div>

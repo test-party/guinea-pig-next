@@ -172,19 +172,19 @@ export default function AllTests() {
       </div>
       <div>
         <div>
-          <div role="cell">This Cell needs row and row's parent options</div>
+          <div role="cell">This Cell needs row and row&apos;s parent options</div>
         </div>
       </div>
       <div>
         <div role="row">
-          <div role="cell">This Cell has row, needs row's parent options</div>
+          <div role="cell">This Cell has row, needs row&apos;s parent options</div>
         </div>
       </div>
       <div>
         <div role="rowgroup">
           <div>
             <div role="cell">
-              This Cell has rowgroup, needs row in between and rowgroup's parent
+              This Cell has rowgroup, needs row in between and rowgroup&apos;s parent
               options
             </div>
           </div>
@@ -193,13 +193,13 @@ export default function AllTests() {
       <div>
         <div>
           <div role="cell">
-            This is Cell 1, it needs row and row's parent options
+            This is Cell 1, it needs row and row&apos;s parent options
           </div>
         </div>
         <div>
           <div>
             This is supposed to be cell under row. It should be remediated as
-            part of Cell 1's remediation
+            part of Cell 1&apos;s remediation
           </div>
         </div>
       </div>

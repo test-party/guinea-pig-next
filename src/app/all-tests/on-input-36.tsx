@@ -23,7 +23,7 @@ export default function onInput() {
             <br />
             
             <h2>Compliant Example</h2>
-            <p>This form will submit only when the user clicks the "Submit" button.</p>
+            <p>This form will submit only when the user clicks the &quot;Submit&quot; button.</p>
             <form method="get" id="form1" onSubmit={handleSubmit}>
                 <input type="text" name="text1" size={3} maxLength={3} /> - 
                 <input type="text" name="text2" size={3} maxLength={3} /> - 
