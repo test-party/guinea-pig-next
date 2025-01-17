@@ -9,15 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Page() {
   return (
     <body className={inter.className}>
-      <div role="grid" aria-colcount="a">
-        <div role="row">
-          <div role="gridcell">Cell 1</div>
-        </div>
-      </div>
-      <button aria-disabled="xxxxx"> BUTTON 1</button>
-      <div id="parent" aria-owns={1}>
-        <div id="child1">Child 1</div>
-      </div>
+      <div>some "text"</div>
     </body>
   );
 }
