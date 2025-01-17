@@ -4,7 +4,7 @@
 export default function Page() {
   return (
     <body>
-      <div test-id="123">
+      <div onClick={() => console.log('clicked')} test-id="123">
         <div>
           <svg role="img" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" id="Capa_1" width="48px" height="48px" viewBox="0 0 399.389 399.389" xmlSpace="preserve">
             <g>
