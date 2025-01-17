@@ -4,7 +4,7 @@
 export default function Page() {
   return (
     <body>
-      <svg aria-label="test" role="img" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+      <svg onClick={() => {}} role="img" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <rect x="7" y="21" width="6" height="11" fill="#00286f" stroke-width="0"></rect>
         <rect x="35" y="21" width="6" height="11" fill="#0d3b8d" stroke-width="0"></rect>
         <rect x="35" y="21" width="6" height="5" fill="#00286f" stroke-width="0"></rect>
