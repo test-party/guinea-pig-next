@@ -6,7 +6,7 @@ export default function Page() {
     <body>
       <div>
         <div>
-          <svg onClick={() => {}} id="Layer_1" role="img" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+          <svg onClick={() => console.log('HERE')} id="Layer_1" role="img" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
             <path d="M24,0h0c-1.105,0-2,.895-2,2v9h4V2c0-1.105-.895-2-2-2Z" fill="#ff3b65" stroke-width="0"></path>
             <rect x="8" y="23" width="32" height="4" rx="1" ry="1" fill="#d82b50" stroke-width="0"></rect>
             <path d="M40,25H8v1c0,.552.448,1,1,1h30c.552,0,1-.448,1-1v-1Z" fill="#b2103b" stroke-width="0"></path>
