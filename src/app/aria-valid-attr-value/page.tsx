@@ -9,7 +9,16 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Page() {
   return (
     <body className={inter.className}>
-      <div>some "text"</div>
+      <div role="grid">
+        <div role="row">
+          <div role="gridcell">Cell 1</div>
+        </div>
+      </div>
+      <button aria-disabled="true"> BUTTON 1</button>
+      <div id="parent" aria-owns="child1">
+        <div id="child1">Child 1</div>
+      </div>
+      <div role="checkbox" aria-checked="true">Item selecionado</div>
     </body>
   );
 }

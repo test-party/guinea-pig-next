@@ -33,8 +33,8 @@ export default function onInput() {
 
             <br />
 
-            <h2>"Compliant Example"</h2>
-            <p>This form will open a new window only when the user clicks the Submit button.</p>
+            <h2>Compliant Example</h2>
+            <p>This form will open a new window only when the user clicks the &quot;Submit&quot; button.</p>
             <form name="mirror_form_compliant" id="mirror_form_compliant" action="" method="get" onSubmit={handleSubmit}>
                 <p>Please select a mirror download site:</p>
                 <p>
