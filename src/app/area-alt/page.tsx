@@ -4,7 +4,7 @@
 export default function Page() {
   return (
     <body>
-      <a href='https://google.com'></a>
+      <a href='https://google.com' aria-label="test"></a>
     </body>
   );
 }
