@@ -5,6 +5,7 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
+            <p>click below to subscribe!</p>
             <button role="button"></button>
         </div>
     );
