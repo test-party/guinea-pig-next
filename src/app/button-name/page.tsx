@@ -5,7 +5,7 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
-            <button onClick={() => console.log('CLICKED')}>Click me</button>
+            <button role="button" onClick={() => console.log('CLICKED')}>Click me</button>
         </div>
     );
 };   
