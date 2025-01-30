@@ -1,3 +1,4 @@
+'use-client'
 import React from 'react';
 
 //http://localhost:3000/button-name
