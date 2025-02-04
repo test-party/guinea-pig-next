@@ -1,6 +1,7 @@
+//http://localhost:3000/images
 export default function Images() {
     let ids: number[] = []
-    for (var i=0; i < 39; i++) {
+    for (var i=0; i < 2; i++) {
         ids.push(i + 3)
     }
     return (
