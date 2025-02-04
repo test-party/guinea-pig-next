@@ -229,6 +229,13 @@ export default function AllTests() {
         <div>Should be tab</div>
         <div>Should be tab</div>
       </div>
+      <div>
+        <meta http-equiv="refresh" content="10" />
+        <meta http-equiv="refresh" content={(60 * 60 * 20).toString()} />
+        <meta http-equiv="content-security-policy" />
+        <meta http-equiv="content-type" />
+        <meta http-equiv="default-style" />
+      </div>
     </body>
   );
 }
