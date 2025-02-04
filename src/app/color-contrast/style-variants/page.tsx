@@ -1,4 +1,5 @@
 export default function ColorContrast() {
+  const color = "text-gray-400";
   return (
     <body style={{ padding: "20px" }}>
       {/* Inline Styles */}
@@ -9,12 +10,18 @@ export default function ColorContrast() {
         Inline: Poor Contrast (Light Gray on White)
       </p>
 
-      {/* Simulated Tailwind-Like Styles */}
+      {/* Tailwind Styles */}
       <div className="bg-red-500 text-charcoal">
-        Tailwind-Like: Good Contrast (Charcoal on Red)
+        Tailwind: Good Contrast (Charcoal on Red)
       </div>
       <div className="bg-gray-300 text-gray-400">
-        Tailwind-Like: Poor Contrast (Gray on Slightly Darker Gray)
+        Tailwind: Poor Contrast (Gray on Slightly Darker Gray)
+      </div>
+      <div className="bg-gray-300 text-gray-400 flex justify-center h-12">
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={`bg-gray-300 ${color} flex justify-center h-12`}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
       </div>
 
       {/* CSS Class-Based Styles */}
@@ -24,8 +31,6 @@ export default function ColorContrast() {
       <div className="red-on-lightred">
         CSS-Class: Poor Contrast (Bright Red on Light Red)
       </div>
-
-      {/* Custom CSS */}
       <div className="custom-blue">
         Custom Blue: Good Contrast (White on Dark Blue)
       </div>
@@ -35,19 +40,6 @@ export default function ColorContrast() {
 
       {/* Custom CSS */}
       <style>{`
-        .bg-red-500 {
-          background-color: #e3342f;
-        }
-        .text-charcoal {
-          color: #100101;
-        }
-        .bg-gray-300 {
-          background-color: #d1d5db;
-        }
-        .text-gray-400 {
-          color: #9ca3af;
-        }
-
         .red-on-lightred {
           color: #ff3333;
           background-color: #ffe6e6;
@@ -60,8 +52,6 @@ export default function ColorContrast() {
           padding: 10px;
           margin-top: 20px;
         }
-
-        /* Custom CSS */
         .custom-yellow {
           color: #ffff00;
           background-color: #ffffcc;
