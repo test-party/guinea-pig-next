@@ -15,6 +15,13 @@ const Page = () => {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </select>
+            <select>
+                <option value="tesla">Tesla</option>
+                <option value="ford">Ford</option>
+                <option value="chevy">Chevy</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="bmw">BMW</option>
+            </select>
         </div>
     );
 };
