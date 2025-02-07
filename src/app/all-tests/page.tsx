@@ -1,6 +1,7 @@
 //http://localhost:3000/all-tests
 import OnInput36 from "./on-input-36";
 import OnInput37 from "./on-input-37";
+import { colorD } from "../../components/ColorStyles";
 
 let ids: number[] = [];
 for (var i = 0; i < 39; i++) {
@@ -8,6 +9,10 @@ for (var i = 0; i < 39; i++) {
 }
 
 export default function AllTests() {
+  const colorA = "text-gray-400";
+  const colorB = "text-gray-400 bg-gray-300";
+  const colorC = "bg-gray-300 text-gray-400";
+
   return (
     <body>
       <h1>My page</h1>
@@ -261,6 +266,35 @@ export default function AllTests() {
           <option value="bmw">BMW</option>
         </select>
       </div>
+      {/* Tailwind Styles */}
+      <div className="bg-red-500 text-charcoal">
+        Tailwind: Good Contrast (Charcoal on Red)
+      </div>
+      <div className="bg-gray-300 text-gray-400">
+        Tailwind: Poor Contrast (Gray on Slightly Darker Gray)
+      </div>
+      <div className="bg-gray-300 text-gray-400 flex justify-center h-12">
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={`bg-gray-300 ${colorA} flex justify-center h-12`}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={colorB}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={`bg-gray-300 ${colorC} flex justify-center h-12`}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={`bg-gray-300 ${colorD} flex justify-center h-12`}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      {/* Inline Styles */}
+      <h1 style={{ color: "#ffffff", backgroundColor: "#000000" }}>
+        Inline: Good Contrast (White on Black)
+      </h1>
+      <p style={{ color: "#cccccc", backgroundColor: "#ffffff" }}>
+        Inline: Poor Contrast (Light Gray on White)
+      </p>
     </body>
   );
 }
