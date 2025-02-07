@@ -236,7 +236,7 @@ export default function AllTests() {
         <meta http-equiv="content-type" />
         <meta http-equiv="default-style" />
       </div> */}
-      {/* <div>
+       <div>
         <meta name="viewport" />
         <meta name="viewport" content="user-scalable=no" />
         <meta name="viewport" content="user-scalable=no, maximum-scale=2.6" />
@@ -260,7 +260,7 @@ export default function AllTests() {
           <option value="mercedes">Mercedes</option>
           <option value="bmw">BMW</option>
         </select>
-      </div> */}
+      </div>
     </body>
   );
 }
