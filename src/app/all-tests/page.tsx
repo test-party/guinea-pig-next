@@ -224,12 +224,12 @@ export default function AllTests() {
         <div>Should be listitem</div>
         <div>Should be listitem</div>
       </div>
-      {/* <div>
+       <div>
         <div role="tab">tab needs parent tablist</div>
         <div>Should be tab</div>
         <div>Should be tab</div>
       </div>
-      <div>
+     {/* <div>
         <meta http-equiv="refresh" content="10" />
         <meta http-equiv="refresh" content={(60 * 60 * 20).toString()} />
         <meta http-equiv="content-security-policy" />
