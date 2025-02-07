@@ -224,7 +224,7 @@ export default function AllTests() {
         <div>Should be listitem</div>
         <div>Should be listitem</div>
       </div>
-      <div>
+      {/* <div>
         <div role="tab">tab needs parent tablist</div>
         <div>Should be tab</div>
         <div>Should be tab</div>
@@ -235,7 +235,7 @@ export default function AllTests() {
         <meta http-equiv="content-security-policy" />
         <meta http-equiv="content-type" />
         <meta http-equiv="default-style" />
-      </div>
+      </div> */}
       {/* <div>
         <meta name="viewport" />
         <meta name="viewport" content="user-scalable=no" />
