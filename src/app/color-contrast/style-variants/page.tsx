@@ -1,5 +1,10 @@
+import { colorD } from "../../../components/ColorStyles";
+
 export default function ColorContrast() {
-  const color = "text-gray-400";
+  const colorA = "text-gray-400";
+  const colorB = "text-gray-400 bg-gray-300";
+  const colorC = "bg-gray-300 text-gray-400";
+  
   return (
     <body style={{ padding: "20px" }}>
       {/* Inline Styles */}
@@ -20,7 +25,16 @@ export default function ColorContrast() {
       <div className="bg-gray-300 text-gray-400 flex justify-center h-12">
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
       </div>
-      <div className={`bg-gray-300 ${color} flex justify-center h-12`}>
+      <div className={`bg-gray-300 ${colorA} flex justify-center h-12`}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={colorB}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={`bg-gray-300 ${colorC} flex justify-center h-12`}>
+        Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
+      </div>
+      <div className={`bg-gray-300 ${colorD} flex justify-center h-12`}>
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
       </div>
 
