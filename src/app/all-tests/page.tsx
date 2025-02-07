@@ -231,8 +231,7 @@ export default function AllTests() {
       </div>
       <div>
         <meta http-equiv="refresh" />
-        {/* These two cases cause puppetteer server to disconnect
-        <meta http-equiv="refresh" content="10" /> */}
+        <meta http-equiv="refresh" content="60" />
         <meta http-equiv="refresh" content={(60 * 60 * 20).toString()} />
         <meta http-equiv="content-security-policy" />
         <meta http-equiv="content-type" />
