@@ -5,30 +5,6 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
-            <header>
-                Header Tag
-            </header>
-            <nav>
-                Nav Tag
-            </nav>
-            <main>
-                Main Tag
-            </main>
-            <footer>
-                Footer Tag
-            </footer>
-            <div role="search">
-                Search Role Div
-            </div>
-            <div role="application">
-                Application Role Div
-            </div>
-            <div role="form">
-                Form Role Div
-            </div>
-            <div role="region">
-                Region Role Div
-            </div>
             <div>
                 <div>
                     <div>
