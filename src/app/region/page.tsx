@@ -5,6 +5,9 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
+            <div role="main">
+                Main Role Div
+            </div>
             <div>
                 <div>
                     <div>
