@@ -9,7 +9,7 @@ const Page = () => {
                 <div role='main'>
                     Hello World
                 </div>
-                <div>
+                <div role="main">
                     <div>
                         <div>
                             <div>
@@ -18,11 +18,11 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div role="main">
                     Lorum Ipsum
                 </div>
             </div>
-            <div>
+            <div role="main">
                 another one
             </div>
         </div>
