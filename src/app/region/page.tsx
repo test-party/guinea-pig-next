@@ -5,7 +5,7 @@ import React from 'react';
 const Page = () => {
     return (
         <div>
-            <div>
+            <div role='main'>
                 Hello World
             </div>
             <div>
