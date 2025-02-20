@@ -12,6 +12,9 @@ export default function InteractivePage() {
 
                 <button onFocus={handleFocus} id="button-one" className="text-left w-fit">Button One</button>
                 <button className="text-left w-fit">Button Two</button>
+                <div className="bg-gray-200 h-12 flex items-center">
+                    <button id="button-three" className="text-left w-fit focus:outline-gray-400">Button Three</button>
+                </div>
             </div>
         </body>
     )
