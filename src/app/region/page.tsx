@@ -6,7 +6,7 @@ const Page = () => {
     return (
         <body>
             <div>
-                <div role='main'>
+                <div>
                     Main Role Div
                 </div>
                 <div id='1'>
