@@ -25,6 +25,9 @@ const Page = () => {
                     another one
                 </div>
             </div>
+            <div>
+                Testing
+            </div>
         </body>
     );
 };
