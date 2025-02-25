@@ -4,9 +4,9 @@ import React from 'react';
 //http://localhost:3000/region
 const Page = () => {
     return (
-        <body>
+        <body role='main'>
             <div>
-                <div role="main">
+                <div>
                     Main Role Div
                 </div>
                 <div id='1'>
@@ -25,9 +25,12 @@ const Page = () => {
                     another one
                 </div>
             </div>
+            {/* 
+            // TODO: This case of multiple top level divs is NOT handled.
             <div>
                 Testing
-            </div>
+            </div> 
+            */}
         </body>
     );
 };
