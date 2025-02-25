@@ -4,9 +4,9 @@ import React from 'react';
 //http://localhost:3000/region
 const Page = () => {
     return (
-        <body role='main'>
+        <body>
             <div>
-                <div>
+                <div role="main">
                     Main Role Div
                 </div>
                 <div id='1'>
