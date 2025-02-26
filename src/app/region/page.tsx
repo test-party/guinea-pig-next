@@ -24,13 +24,10 @@ const Page = () => {
                 <div id='3'>
                     another one
                 </div>
-            </div>
-            {/* 
-            // TODO: This case of multiple top level divs is NOT handled.
+            </div>            
             <div>
                 Testing
             </div> 
-            */}
         </body>
     );
 };
