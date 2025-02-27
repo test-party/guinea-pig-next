@@ -5,34 +5,32 @@ import React from 'react';
 const Page = () => {
     return (
         <body>
-            <main>
-                <div>
-                    <div role="main">
-                        Main Role Div
-                    </div>
-                    <div id='1'>
+            <div>
+                <div role="main">
+                    Main Role Div
+                </div>
+                <div id='1'>
+                    <div>
                         <div>
                             <div>
-                                <div>
-                                    depth testing
-                                </div>
+                                depth testing
                             </div>
                         </div>
                     </div>
-                    {/* <div>
-                        Comment Testing
-                    </div> */}
-                    <div id='2'>
-                        Lorum Ipsum
-                    </div>
-                    <div id='3'>
-                        another one
-                    </div>
                 </div>
-                <div>
-                    Testing
+                {/* <div>
+                    Comment Testing
+                </div> */}
+                <div id='2'>
+                    Lorum Ipsum
                 </div>
-            </main>
+                <div id='3'>
+                    another one
+                </div>
+            </div>
+            <div>
+                Testing
+            </div>
         </body>
     );
 };
