@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import Import from './import';
 
 //http://localhost:3000/region
 const Page = () => {
@@ -31,6 +32,7 @@ const Page = () => {
             <div>
                 Testing
             </div>
+            <Import />
         </body>
     );
 };
