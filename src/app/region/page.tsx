@@ -27,10 +27,10 @@ const Page = () => {
                 <div id='3'>
                     another one
                 </div>
-            </div>            
+            </div>
             <div>
                 Testing
-            </div> 
+            </div>
         </body>
     );
 };
