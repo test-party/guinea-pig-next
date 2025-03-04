@@ -5,7 +5,7 @@ import Import from './import';
 //http://localhost:3000/region
 const Page = () => {
     return (
-        <body>
+        <div>
             <div>
                 <div role="main">
                     Main Role Div
@@ -33,7 +33,7 @@ const Page = () => {
                 Testing
             </div>
             <Import />
-        </body>
+        </div>
     );
 };
 

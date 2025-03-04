@@ -5,7 +5,7 @@ export default function InteractivePage() {
         e.target.blur();
     };
     return (
-        <body>
+        <div>
             <div className="flex flex-col space-y-4 w-100">
                 <a id="link-one" className="w-fit focus:outline-none">Link One</a>
                 <a href="/one" className="w-fit">Link Two</a>
@@ -16,6 +16,6 @@ export default function InteractivePage() {
                     <button id="button-three" className="text-left w-fit focus:outline-gray-400">Button Three</button>
                 </div>
             </div>
-        </body>
+        </div>
     )
 }
