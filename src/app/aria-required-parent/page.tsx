@@ -1,7 +1,7 @@
 //http://localhost:3000/aria-required-parent
 export default function Page() {
   return (
-    <body>
+    <div>
       <div>
         <div>
           <div role="cell">This Cell needs row and row&apos;s parent options</div>
@@ -53,6 +53,6 @@ export default function Page() {
         <div>Should be tab</div>
         <div>Should be tab</div>
       </div>
-    </body>
+    </div>
   );
 }

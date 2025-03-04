@@ -14,7 +14,7 @@ export default function AllTests() {
   const colorC = "bg-gray-300 text-gray-400";
 
   return (
-    <body>
+    <div>
       <h1>My page</h1>
       <div style={{ width: "100%", maxHeight: "200px" }}>
         <audio controls>
@@ -296,6 +296,6 @@ export default function AllTests() {
       <p style={{ color: "#cccccc", backgroundColor: "#ffffff" }}>
         Inline: Poor Contrast (Light Gray on White)
       </p>
-    </body>
+    </div>
   );
 }
