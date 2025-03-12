@@ -3,7 +3,8 @@ export default function Page() {
     return (
         <main>
             <form action="#">
-                <input type="button" id="fail3" />
+                <label id="label-submit">Click here to submit</label>
+                <input type="button" aria-labelledby="label-submit"/>
             </form>
         </main>
     );
