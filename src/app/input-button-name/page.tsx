@@ -6,6 +6,9 @@ export default function Page() {
                 <label id="submit-here"></label>
                 <input type="button" aria-labelledby="submit-here"/>
             </form>
+            <form action="#">
+                <input type="button" id="first-name"/>
+            </form>
         </main>
     );
 }
