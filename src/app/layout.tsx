@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body aria-hidden="false">
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )
