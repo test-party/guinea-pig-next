@@ -264,6 +264,21 @@ export default function AllTests() {
             <input type="text" aria-pressed="true" />
         </div>
       </div>
+      <div>
+        <h2>ARIA-METER-NAME TESTS</h2>
+        <div>
+          <div role="meter" id="empty"></div>
+          <div role="meter" id="alempty" aria-label=""></div>
+          <div role="meter" id="albmissing" aria-labelledby="nonexistent"></div>
+          <div role="meter" id="albempty" aria-labelledby="emptydiv"></div>
+          <div id="emptydiv"></div>
+          <div role="meter" id="valid-label-meter"></div>
+          <div id="valid">Valid Label</div>
+        </div>
+      </div>
+      <div>
+        
+      </div>
     </div>
   );
 }
