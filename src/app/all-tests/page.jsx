@@ -398,7 +398,7 @@ export default function AllTests() {
       <div>
         <h2>ARIA-VALID-ATTR-VALUE TESTS</h2>
         <div
-          className={inter.className}>
+          >
           <input type="number" aria-valuemin="sadasdasdas"></input>
           <button role="tab" aria-selected="doaksdokoaksadsok">Tab 1</button>
           <div role="alert" aria-relevant="additidsdsons, remodsdsvals">New messages</div>
