@@ -243,25 +243,25 @@ export default function AllTests() {
       <div>
         <h2>ARIA-INIVALID-ATTRIBUTE TESTS</h2>
         <div>
-            <div>
-                <p aria-checked="true">ABC</p>
-            </div>
+          <div>
+            <p aria-checked="true">ABC</p>
+          </div>
 
-            <div>
-                <p aria-checked="true">ABC</p>
-                <p aria-checked="true">ABC</p>
+          <div>
+            <p aria-checked="true">ABC</p>
+            <p aria-checked="true">ABC</p>
 
 
-            </div>
+          </div>
 
-            <div>
-                <button aria-expanded="true">ABC</button>
-                <button aria-expanded="false">ABC</button>
+          <div>
+            <button aria-expanded="true">ABC</button>
+            <button aria-expanded="false">ABC</button>
 
-            </div>
+          </div>
 
-            <input type="text" aria-pressed="true" />
-            <input type="text" aria-pressed="true" />
+          <input type="text" aria-pressed="true" />
+          <input type="text" aria-pressed="true" />
         </div>
       </div>
       <div>
@@ -277,7 +277,23 @@ export default function AllTests() {
         </div>
       </div>
       <div>
-        
+        <h2>ARIA-REQUIRED-ATTR TESTS</h2>
+        <div>
+          <div role="combobox" aria-expanded="true" aria-controls=""></div>
+          <div role="combobox" aria-expanded="true"></div>
+          <div role="combobox" aria-controls=""></div>
+          <div role="combobox" ></div>
+          <div role="switch"></div>
+          <div role="checkbox"></div>
+          <div role="menu">
+            <div role="menuitemcheckbox"></div>
+            <div role="menuitemcheckbox"></div>
+            <div role="menuitemradio"></div>
+          </div>
+          <div role="radio"></div>
+          <div role="scrollbar"></div>
+          <div role="slider"></div>
+        </div>
       </div>
     </div>
   );
