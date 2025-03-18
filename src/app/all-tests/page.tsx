@@ -17,32 +17,222 @@ export default function AllTests() {
     <div>
       <h1>MY PAGE</h1>
       <div>
-        <h2>AREA-ALT TESTS</h2>
+        <h2>ARIA-COMMAND-NAME LABELLED-BY TESTS</h2>
         <div>
-          <img src="https://media.geeksforgeeks.org/wp-content/uploads/20190227165729/area11.png"
-            alt="" width="300" height="119"
-            useMap="#shapemap" />
-          <map name="shapemap">
-            <area shape="poly" coords="59,31,28,83,91,83"
-              href="https://media.geeksforgeeks.org/wp-content/uploads/20190227165802/area2.png"
-            />
 
-            <area shape="circle" coords="155,56,26"
-              href="https://media.geeksforgeeks.org/wp-content/uploads/20190227165934/area3.png"
-            />
+          {/* Single Nonexistent ID with a Close Match */}
+          <div>
+            <div role="button" id="save-btn" aria-labelledby="sav-label"></div>
+            {/* Existing IDs in the DOM */}
+            <span id="save-label">Save Changes</span>
+            <h1 id="header">Welcome</h1>
+            <p id="description">This is a description.</p>
+            <button id="submit-btn">Submit</button>
+          </div>
 
-            <area shape="rect" coords="224,30,276,82"
-              href="https://media.geeksforgeeks.org/wp-content/uploads/20190227170021/area4.png"
-              alt="Square" />
-          </map>
-          <svg role="img" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" aria-label=""><path d="M8.49,12.68v4.61c0,.34,.23,.61,.53,.71v5.48c0,.13-.14,3.21,1.88,5.34,1.22,1.28,2.93,1.94,5.09,1.94s3.88-.65,5.09-1.94c2.02-2.13,1.89-5.21,1.88-5.3v-5.52c.3-.1,.53-.37,.53-.71v-4.61c1.71-.69,2.92-2.36,2.92-4.32,0-2.57-2.09-4.67-4.67-4.67-.49,0-.98,.08-1.46,.23-1.09-1.67-2.93-2.68-4.94-2.68s-3.68,.91-4.79,2.46c-2.74-.22-5.01,1.96-5.01,4.65,0,1.96,1.21,3.63,2.92,4.32Zm11.51,15.11c-.92,.97-2.27,1.46-4,1.46s-3.07-.49-4-1.46c-1.58-1.66-1.48-4.21-1.48-4.28v-5.48h10.96v5.51s.1,2.58-1.48,4.24Zm2.01-14.77v3.51H9.99v-3.51h12.02ZM10.23,5.19c.21,0,.4,.02,.59,.05,.3,.05,.61-.09,.77-.35,.81-1.34,2.22-2.15,3.78-2.15,1.68,0,3.19,.94,3.95,2.45,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.45-.23,.95-.35,1.44-.35,1.75,0,3.17,1.42,3.17,3.17s-1.42,3.17-3.17,3.17H10.23c-1.75,0-3.17-1.42-3.17-3.17s1.42-3.17,3.17-3.17Z" /><path d="M14.26,5.25c1.5,.28,2.59,1.59,2.59,3.11,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.24-1.6-4.17-3.81-4.59-.4-.07-.8,.19-.88,.6-.08,.41,.19,.8,.6,.88Z" /><circle cx="13.32" cy="20.07" r="1.25" /><circle cx="18.68" cy="20.07" r="1.25" /><path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" /></svg>
+
+          {/* Single Nonexistent ID with No Close Match */}
+          <div>
+            <div role="link" id="home-link" aria-labelledby="start-page">Home</div>
+            {/* Existing IDs in the DOM */}
+            <nav id="main-nav">...</nav>
+            <div id="content">...</div>
+          </div>
+
+
+          {/* Case Sensitivity Issues */}
+          <div>
+            <div role="link" id="contact-us-link" aria-labelledby="ContactUsHeading"></div>
+            {/* Existing IDs in the DOM */}
+            <h2 id="contactusheading">Contact Us</h2>
+          </div>
+
+
+          {/* Empty aria-labelledby Attribute */}
+          <div>
+            <div role="button" id="refresh-btn" aria-labelledby=""></div>
+            {/* Existing IDs in the DOM */}
+            <span id="refresh-text">Refresh Page</span>
+          </div>
+
+
+          {/* Multiple Nonexistent IDs with Close Matches */}
+          <div>
+            <div role="button" id="confirmation-dialog" aria-labelledby="dialog-title dialog-desc"></div>
+            {/* Existing IDs in the DOM */}
+            <h3 id="dialog-header">Confirm Action</h3>
+            <p id="dialog-description">Do you want to proceed?</p>
+          </div>
+
+          {/* One Nonexistent ID and One with a Close Match */}
+          <div>
+            <div role="button" id="confirmation-dialog" aria-labelledby="dialog-title dialog-descriptions"></div>
+            {/* Existing IDs in the DOM */}
+            <h3 id="dialog-header">Confirm Action</h3>
+            <p id="dialog-description">Do you want to proceed?</p>
+          </div>
         </div>
       </div>
       <div>
-        <h2>IMAGES TESTS</h2>
-        {ids.map((id) => {
-          return <div key={id}><img className="object-fill w-full h-full" key={id} src={`https://picsum.photos/id/${id}/200/300`}></img></div>
-        })}
+        <h2>ARIA-COMMAND-NAME OTHER CASES</h2>
+        <div>
+          <h2>Passed Examples</h2>
+
+          <div role="link" id="al" aria-label="Name"></div>
+          <div role="button" id="alb" aria-labelledby="labeldiv"></div>
+          <div id="labeldiv">Button label</div>
+          <div role="menuitem" id="combo" aria-label="Aria Name">Name</div>
+          <div role="link" id="title" title="Title"></div>
+
+          <h2>Failed Examples with Real-Life Context</h2>
+
+          <footer>
+            <h2>Stay Connected</h2>
+            <div role="link" id="empty"></div>
+            <p>Follow us on social media for updates</p>
+          </footer>
+
+          <article>
+            <h1>How to Build an Accessible Website</h1>
+            <p>Web accessibility is crucial to ensuring your website is usable by all visitors...</p>
+
+            {/* Properly labeled Share buttons */}
+            <footer>
+              <h2>Share this Article</h2>
+              {/* Missing aria-label for sharing buttons */}
+              <div role="link" id="share-facebook"></div>
+              <div role="link" id="share-twitter"></div>
+              <div role="link" id="share-linkedin"></div>
+            </footer>
+
+            {/* Related Articles section */}
+            <section>
+              <h2>Related Articles</h2>
+              <ul>
+                <li><a href="#">10 Tips for Better Web Design</a></li>
+                <li><a href="#">Improving Web Accessibility with ARIA</a></li>
+                {/* Missing aria-label for the third related article */}
+                <li><a href="#" id="related-article"></a></li>
+              </ul>
+            </section>
+          </article>
+
+          <section>
+            <h2>Register for the Event</h2>
+            <form>
+              <fieldset>
+                <legend>Step 1: Personal Information</legend>
+                <label htmlFor="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" />
+
+                <label htmlFor="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" />
+
+                {/* Missing aria-label for the Next button */}
+                <div role="button" id="next-step"></div>
+              </fieldset>
+
+              <fieldset>
+                <legend>Step 2: Contact Information</legend>
+                <label htmlFor="email">Email Address:</label>
+                <input type="email" id="email" name="email" />
+
+                <label htmlFor="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" />
+
+                {/* Missing aria-label for the Previous button */}
+                <div role="button" id="prev-step"></div>
+
+                {/* Missing aria-label for the Submit button */}
+                <div role="button" id="submit-form"></div>
+              </fieldset>
+            </form>
+          </section>
+
+          <section>
+            <h2>Contact Us</h2>
+            <form>
+              <label htmlFor="name">Your Name:</label>
+              <input type="text" id="name" name="name" />
+
+              <label htmlFor="message">Your Message:</label>
+              <textarea id="message" name="message"></textarea>
+
+              <div role="button" id="alempty" aria-label=""></div>
+            </form>
+          </section>
+
+          <section>
+            <h2>Search Results</h2>
+            <ul>
+              <li>Result 1</li>
+              <li>Result 2</li>
+              <li>Result 3</li>
+            </ul>
+
+            <nav aria-label="Pagination">
+              {/* Properly labeled page button */}
+              <div role="button" aria-label="Previous Page" id="prev-page"></div>
+
+              {/* Missing aria-label for page number buttons */}
+              <div role="button" id="page-1"></div>
+              <div role="button" id="page-2"></div>
+              <div role="button" id="page-3"></div>
+
+              {/* Properly labeled page button */}
+              <div role="button" aria-label="Next Page" id="next-page"></div>
+            </nav>
+          </section>
+
+          <div role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
+            <h2 id="modal-title">Confirm Your Action</h2>
+            <p id="modal-description">Are you sure you want to save changes to your profile?</p>
+
+            {/* Missing aria-label for the Save button */}
+            <div role="button" id="save-changes"></div>
+
+            {/* Properly labeled Cancel button */}
+            <div role="button" aria-label="Cancel" id="cancel"></div>
+
+            {/* Missing aria-label for the Close button */}
+            <div role="button" id="close-modal"></div>
+          </div>
+
+          <nav>
+            <h2>User Settings</h2>
+            <p>Select a preference from the menu:</p>
+            <ul role="menu" aria-label="User settings menu">
+              {/* Successful menu item with aria-label */}
+              <li role="menuitem" id="profile" aria-label="Edit Profile">Edit Profile</li>
+
+              {/* Failed example: aria-labelledby references an element that doesn't exist */}
+              <li role="menuitem" id="albmissing" aria-labelledby="nonexistent">Account Settings</li>
+
+              {/* Failed example: aria-label is missing */}
+              <li role="menuitem" id="preferences"></li>
+            </ul>
+          </nav>
+
+          <nav aria-label="Mobile Menu">
+            <button aria-haspopup="true" aria-expanded="false" id="mobile-menu-toggle">
+              Menu
+            </button>
+            <div role="menu" aria-labelledby="mobile-menu-toggle">
+              {/* Properly labeled menuitem */}
+              <div role="menuitem" aria-label="Home" id="mobile-home">
+                Home
+              </div>
+
+              {/* Missing aria-label for Services */}
+              <div role="menuitem" id="mobile-services"></div>
+
+              {/* Properly labeled menuitem */}
+              <div role="menuitem" aria-label="Contact Us" id="mobile-contact">
+                Contact Us
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   );
