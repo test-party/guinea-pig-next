@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Page() {
     return (
-        <body className={inter.className}>
+        <div className={inter.className}>
             <ul className="prose-sm -ml-1 -mr-1 leading-5">
                 <div>
                     test
@@ -21,6 +21,6 @@ export default function Page() {
                 </div>
                 <li>help</li>
             </ul>
-        </body>
+        </div>
     );
 }

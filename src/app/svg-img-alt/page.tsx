@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Page() {
   return (
-    <body className={inter.className}>
+    <div className={inter.className}>
       <div onClick={() => {}}>
         <svg
           id="Layer_1"
@@ -146,6 +146,6 @@ export default function Page() {
         ></path>
         <circle cx="24" cy="24" r="3" fill="#555e77" stroke-width="0"></circle>
       </svg>
-    </body>
+    </div>
   );
 }

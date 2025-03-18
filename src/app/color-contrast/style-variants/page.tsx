@@ -6,7 +6,7 @@ export default function ColorContrast() {
   const colorC = "bg-gray-300 text-gray-400";
   
   return (
-    <body style={{ padding: "20px" }}>
+    <div style={{ padding: "20px" }}>
       {/* Inline Styles */}
       <h1 style={{ color: "#ffffff", backgroundColor: "#000000" }}>
         Inline: Good Contrast (White on Black)
@@ -79,6 +79,6 @@ export default function ColorContrast() {
           margin-top: 20px;
         }
       `}</style>
-    </body>
+    </div>
   );
 }
