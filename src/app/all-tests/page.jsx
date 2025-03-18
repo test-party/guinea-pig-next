@@ -3,7 +3,7 @@ import OnInput36 from "./on-input-36";
 import OnInput37 from "./on-input-37";
 import { colorD } from "../../components/ColorStyles";
 
-let ids: number[] = [];
+let ids = [];
 for (var i = 0; i < 2; i++) {
   ids.push(i + 3);
 }
@@ -372,27 +372,45 @@ export default function AllTests() {
       <div>
         <h2>ARIA-TOOGLE TESTS</h2>
         <div>
-            <ul role="menu">
-                <li id="pass2" role="menuitemcheckbox" aria-checked="true">
-                </li>
-            </ul>
-            <p id="pass3Label">Sans-serif</p>
-            <ul role="menu">
-                <li id="pass3" role="menuitemradio" aria-checked="true">
-                </li>
-                <li id="pass3" role="menuitemradio" aria-checked="true">
-                </li>
-            </ul>
-            <div role="radiogroup">
-                <div id="pass4" role="radio" aria-checked="false">
-                </div>
-                <div id="pass4" role="radio" aria-checked="false">
-                </div>
+          <ul role="menu">
+            <li id="pass2" role="menuitemcheckbox" aria-checked="true">
+            </li>
+          </ul>
+          <p id="pass3Label">Sans-serif</p>
+          <ul role="menu">
+            <li id="pass3" role="menuitemradio" aria-checked="true">
+            </li>
+            <li id="pass3" role="menuitemradio" aria-checked="true">
+            </li>
+          </ul>
+          <div role="radiogroup">
+            <div id="pass4" role="radio" aria-checked="false">
             </div>
-            <div id="fail5" role="switch" aria-checked="true">
-                <span></span>
-                <span></span>
+            <div id="pass4" role="radio" aria-checked="false">
             </div>
+          </div>
+          <div id="fail5" role="switch" aria-checked="true">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>ARIA-VALID-ATTR-VALUE TESTS</h2>
+        <div
+          className={inter.className}>
+          <input type="number" aria-valuemin="sadasdasdas"></input>
+          <button role="tab" aria-selected="doaksdokoaksadsok">Tab 1</button>
+          <div role="alert" aria-relevant="additidsdsons, remodsdsvals">New messages</div>
+          <div aria-modal="balse">test</div>
+          <div>
+            <p id="more-info">This button submits your form and saves your data.</p>
+            <button aria-details="wrong-id">Submit</button>
+          </div>
+          <div>
+            <div id="submit-button">This buttons access the submition</div>
+            <button aria-owns={false}>Click Me</button>
+          </div>
         </div>
       </div>
     </div>
