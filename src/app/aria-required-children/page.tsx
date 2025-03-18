@@ -1,9 +1,19 @@
 const Page = () => {
     return (
-        <div id="a" role="table">
-            <div id="b" role="rowgroup | row">
-                <div id="c">CELL</div>
+        <div>
+            <div role="list">
+                <p>LIST ITEM</p>
             </div>
+            <nav role="menu">
+
+                <span>option 1</span>
+                <span>option 2</span>
+
+                <div role="menu">
+
+                    <p>Submenu without role="menuitem"</p>
+                </div>
+            </nav>
         </div>
     );
 };
