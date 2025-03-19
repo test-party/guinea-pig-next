@@ -1,7 +1,4 @@
 //http://localhost:3000/all-tests
-import OnInput36 from "./on-input-36";
-import OnInput37 from "./on-input-37";
-import { colorD } from "../../components/ColorStyles";
 
 let ids = [];
 for (var i = 0; i < 2; i++) {
@@ -9,9 +6,6 @@ for (var i = 0; i < 2; i++) {
 }
 
 export default function AllTests() {
-  const colorA = "text-gray-400";
-  const colorB = "text-gray-400 bg-gray-300";
-  const colorC = "bg-gray-300 text-gray-400";
 
   return (
     <div>
