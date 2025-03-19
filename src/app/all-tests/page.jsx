@@ -503,6 +503,36 @@ export default function AllTests() {
             <meta name="viewport" content="user-scalable=no, maximum-scale=1" />
         </div>
       </div>
+      <div>
+        <h2>NEURODIVERSITY RULESET</h2>
+        <div>
+          <h3>LANGUAGE OF PARTS</h3>
+          <p>This text is mostly in english,mas essa parte é em portugues, but the rest still in english</p>
+          <p>This text is working well , no remediations needed </p>
+        </div>
+        <div>
+          <h3>UNUSUAL WORDS</h3>
+          <p>He obfuscated it, now i can't see</p>
+          <p>His walk through the verdant garden surprised the visitors</p>
+          <p>This text is working well , no remediations needed </p>
+        </div>
+        <div>
+          <h3>ABBREVIATIONS</h3>
+          <p>The FBI is an american agency</p>
+          <p>The FMI is an american agency</p>
+          <p>This text is working well , no remediations needed </p>
+        </div>
+        <div>
+          <h3>READING LEVEL</h3>
+          <p>The ephemerality of hermeneutic ontology, intertwining with metacognitive dialectics, imposes a transcendent exegesis whose polysemy radiates through hermetic intertextuality, challenging immediate cognition and demanding a sophisticated semiotic decryption.</p>
+          <p>This text is working well , no remediations needed </p>
+        </div>
+        <div>
+          <h3>PRONUNCIATION</h3>
+          <p>I read the book today, it's amazing!</p>
+          <p>This text is working well , no remediations needed </p>
+        </div>
+      </div>
     </div>
   );
 }
