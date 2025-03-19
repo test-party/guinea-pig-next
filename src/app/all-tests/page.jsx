@@ -417,6 +417,16 @@ export default function AllTests() {
         <h2>BLINK-TAG TESTS</h2>
         <blink>Example blink-tag</blink>
       </div>
+      <div>
+        <h2>BUTTON-NAME TESTS</h2>
+        <div>
+            <p>click below to subscribe!</p>
+            <button role="button"></button>
+        </div>
+      </div>
+      <div>
+        <h2></h2>
+      </div>
     </div>
   );
 }
