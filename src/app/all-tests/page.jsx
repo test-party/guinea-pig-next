@@ -468,6 +468,16 @@ export default function AllTests() {
           </div>
         </div>
       </div>
+      <div>
+        <h2>INPUT-BUTTON-NAME TESTS</h2>
+        <form action="#">
+          <label id="submit-here"></label>
+          <input type="button" aria-labelledby="submit-here" />
+        </form>
+        <form action="#">
+          <input type="button" id="first-name" />
+        </form>
+      </div>
     </div>
   );
 }
