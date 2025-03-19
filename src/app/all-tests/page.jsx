@@ -39,6 +39,7 @@ export default function AllTests() {
         {linkList.map(item => {
           return (
             <a
+              key={item}
               href={`#${item}`}
               className={linkStyle}
             >
