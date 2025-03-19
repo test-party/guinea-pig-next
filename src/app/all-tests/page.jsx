@@ -478,6 +478,12 @@ export default function AllTests() {
           <input type="button" id="first-name" />
         </form>
       </div>
+      <div>
+        <h2>LINK-NAME TESTS</h2>
+        <div >
+            <a href='https://www.google.com'></a>
+        </div>
+      </div>
     </div>
   );
 }
