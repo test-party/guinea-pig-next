@@ -56,25 +56,25 @@ export default function AllTests() {
         <div>
 
           {/* Single Nonexistent ID with a Close Match */}
-          {/* <div className="test-case-container">
+          <div className="test-case-container">
             <h6>"Save changes" has id pointing to a button who as a wrong aria-labelledby attribute 🚫</h6>
-            <div role="button" id="save-btn" aria-labelledby="sav-label"></div> */}
+            <div role="button" id="save-btn" aria-labelledby="sav-label"></div>
             {/* Existing IDs in the DOM */}
-            {/* <span id="save-label">Save Changes</span>
+            <span id="save-label">Save Changes</span>
             <h1 id="header">Welcome</h1>
             <p id="description">This is a description.</p>
             <button id="submit-btn">Submit</button>
-          </div> */}
+          </div>
 
 
           {/* Single Nonexistent ID with No Close Match */}
-          {/* <div className="test-case-container">
+          <div className="test-case-container">
             <h6>No match id for "Home" link aria-labelledby attribute 🚫</h6>
-            <div role="link" id="home-link" aria-labelledby="start-page">Home</div> */}
+            <div role="link" id="home-link" aria-labelledby="start-page">Home</div>
             {/* Existing IDs in the DOM */}
-            {/* <nav id="main-nav">...</nav>
+            <nav id="main-nav">...</nav>
             <div id="content">...</div>
-          </div> */}
+          </div>
 
 
           {/* Case Sensitivity Issues */}
