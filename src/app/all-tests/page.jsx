@@ -1,3 +1,4 @@
+"use client"
 //http://localhost:3000/all-tests
 
 let ids = [];
