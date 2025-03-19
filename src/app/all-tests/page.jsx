@@ -19,7 +19,8 @@ export default function AllTests() {
         <div>
 
           {/* Single Nonexistent ID with a Close Match */}
-          <div>
+          <div className="test-case-container">
+            <h6>"Save changes" has id pointing to a button who as a wrong aria-labelledby attribute 🚫</h6>
             <div role="button" id="save-btn" aria-labelledby="sav-label"></div>
             {/* Existing IDs in the DOM */}
             <span id="save-label">Save Changes</span>
