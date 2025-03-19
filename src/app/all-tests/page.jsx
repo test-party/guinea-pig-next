@@ -36,7 +36,7 @@ export default function AllTests() {
     <div className="flex flex-col items-center justify-start p-8 space-y-4 !bg-blue-500 children-test-container">
       <h1 className={titleStyle}>Not Compliant tests</h1>
       <div className="!grid grid-cols-3 gap-4 w-full p-4">
-        {/* {linkList.map(item => {
+        {linkList.map(item => {
           return (
             <a
               key={item}
@@ -46,7 +46,7 @@ export default function AllTests() {
               <h6>{item}</h6>
             </a>
           )
-        })} */}
+        })}
 
       </div>
       <div id="aria-command-name">
