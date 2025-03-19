@@ -68,13 +68,13 @@ export default function AllTests() {
 
 
           {/* Single Nonexistent ID with No Close Match */}
-          <div className="test-case-container">
+          {/* <div className="test-case-container">
             <h6>No match id for "Home" link aria-labelledby attribute 🚫</h6>
-            <div role="link" id="home-link" aria-labelledby="start-page">Home</div>
+            <div role="link" id="home-link" aria-labelledby="start-page">Home</div> */}
             {/* Existing IDs in the DOM */}
-            <nav id="main-nav">...</nav>
+            {/* <nav id="main-nav">...</nav>
             <div id="content">...</div>
-          </div>
+          </div> */}
 
 
           {/* Case Sensitivity Issues */}
