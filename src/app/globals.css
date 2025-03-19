@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.children-test-container > * {
+    @apply flex flex-col items-start justify-start p-6 bg-white rounded-lg shadow-md w-full h-full flex-grow;
+}
+
+.children-test-container > div > h2 {
+    @apply text-2xl font-bold ;
+}
+
+.children-test-container > div > p {
+    @apply text-lg my-4;
+}

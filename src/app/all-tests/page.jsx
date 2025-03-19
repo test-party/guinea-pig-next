@@ -5,14 +5,17 @@ let ids = [];
 for (var i = 0; i < 2; i++) {
   ids.push(i + 3);
 }
+const titleStyle ="text-4xl font-bold"
 
 export default function AllTests() {
 
   return (
-    <div>
-      <h1>MY PAGE</h1>
+    <div className="flex flex-col items-center justify-start p-8 space-y-4 !bg-blue-500 children-test-container">
+      <h1 className={titleStyle}>Not Compliant tests</h1>
+      
       <div>
-        <h2>ARIA-COMMAND-NAME LABELLED-BY TESTS</h2>
+        <h2>Aria-command-name (labbeledby cases)</h2>
+        <p>Elements with role="link", role="button", or role="menuitem" must have one of the following characteristics: Inner text that is discernible to screen reader users,Non-empty aria-label attribute,aria-labelledby pointing to element with text which is discernible to screen reader users.</p>
         <div>
 
           {/* Single Nonexistent ID with a Close Match */}
