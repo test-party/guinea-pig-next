@@ -484,6 +484,16 @@ export default function AllTests() {
             <a href='https://www.google.com'></a>
         </div>
       </div>
+      <div>
+        <h2>META-REFRESH TESTS</h2>
+        <div>
+            <meta http-equiv="refresh" content="60" />
+            <meta http-equiv="refresh" content={(60 * 60 * 20).toString()} />
+            <meta http-equiv="content-security-policy" />
+            <meta http-equiv="content-type" />
+            <meta http-equiv="default-style" />
+        </div>
+      </div>
     </div>
   );
 }
