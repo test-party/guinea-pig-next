@@ -260,33 +260,10 @@ export default function AllTests() {
           </div>
       </div>
       <div>
-        <h2>Aria-invalid-attribute</h2>
-        <p></p>
+        <h2>Aria-meter-name</h2>
+        <p>Aria meter nodes must have an accessible name.</p>
         <div className="test-case-container">
-          <div>
-            <p aria-checked="true">ABC</p>
-          </div>
-
-          <div>
-            <p aria-checked="true">ABC</p>
-            <p aria-checked="true">ABC</p>
-
-
-          </div>
-
-          <div>
-            <button aria-expanded="true">ABC</button>
-            <button aria-expanded="false">ABC</button>
-
-          </div>
-
-          <input type="text" aria-pressed="true" />
-          <input type="text" aria-pressed="true" />
-        </div>
-      </div>
-      <div>
-        <h2>ARIA-METER-NAME TESTS</h2>
-        <div>
+          <h6>Divs with role "meter" has no accessible name🚫</h6>
           <div role="meter" id="empty"></div>
           <div role="meter" id="alempty" aria-label=""></div>
           <div role="meter" id="albmissing" aria-labelledby="nonexistent"></div>
@@ -297,8 +274,10 @@ export default function AllTests() {
         </div>
       </div>
       <div>
-        <h2>ARIA-REQUIRED-ATTR TESTS</h2>
-        <div>
+        <h2>Aria-required-attr</h2>
+        <p>Required ARIA attributes must be provided</p>
+        <div className="test-case-container">
+          <h6>Divs has no all required attributes 🚫</h6>
           <div role="combobox" aria-expanded="true" aria-controls=""></div>
           <div role="combobox" aria-expanded="true"></div>
           <div role="combobox" aria-controls=""></div>
@@ -316,99 +295,23 @@ export default function AllTests() {
         </div>
       </div>
       <div>
-        <h2>ARIA-REQUIRED-CHILDREN TESTS</h2>
+        <h2>Aria-required-parent</h2>
+        <p>Certain ARIA roles must be contained by particular parent elements</p>
         <div>
-          <div role="list">
-            <p>LIST ITEM</p>
-          </div>
-          <nav role="menu">
-
-            <span>option 1</span>
-            <span>option 2</span>
-
-            <div role="menu">
-
-              <p>Submenu without role="menuitem"</p>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div>
-        <h2>ARIA-REQUIRED-PARENT TESTS</h2>
-        <div>
-          <div>
+          <div className="test-case-container">
+            <h6>Cell with role cell needs row on parent option 🚫</h6>
             <div>
               <div role="cell">This Cell needs row and row&apos;s parent options</div>
             </div>
           </div>
-          <div>
-            <div role="row">
-              <div role="cell">This Cell has row, needs row&apos;s parent options</div>
-            </div>
-          </div>
-          <div>
-            <div role="rowgroup">
-              <div>
-                <div role="cell">This Cell has rowgroup, needs row in between and rowgroup&apos;s parent options</div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <div role="cell">This is Cell 1, it needs row and row&apos;s parent options</div>
-            </div>
-            <div>
-              <div>This is supposed to be cell under row.  It should be remediated as part of Cell 1&apos;s remediation</div>
-            </div>
-          </div>
-          <div>
-            <div role="caption">caption needs parent options</div>
-          </div>
-          <div>
-            <div role="treeitem">treeitem needs parent options</div>
-            <div>Should be treeitem</div>
-          </div>
-          <div>
-            <div role="option">option needs parent options</div>
-            <div>Should be Option</div>
-          </div>
-          <div>
-            <div role="menuitem">menuitem needs parent options</div>
-            <div>Should be menuitem</div>
-            <div>Should be menuitem</div>
-          </div>
-          <div>
-            <div role="listitem">listitem needs parent list</div>
-            <div>Should be listitem</div>
-            <div>Should be listitem</div>
-          </div>
-          <div>
-            <div role="tab">tab needs parent tablist</div>
-            <div>Should be tab</div>
-            <div>Should be tab</div>
-          </div>
+          
         </div>
       </div>
       <div>
-        <h2>ARIA-TOOGLE TESTS</h2>
-        <div>
-          <ul role="menu">
-            <li id="pass2" role="menuitemcheckbox" aria-checked="true">
-            </li>
-          </ul>
-          <p id="pass3Label">Sans-serif</p>
-          <ul role="menu">
-            <li id="pass3" role="menuitemradio" aria-checked="true">
-            </li>
-            <li id="pass3" role="menuitemradio" aria-checked="true">
-            </li>
-          </ul>
-          <div role="radiogroup">
-            <div id="pass4" role="radio" aria-checked="false">
-            </div>
-            <div id="pass4" role="radio" aria-checked="false">
-            </div>
-          </div>
+        <h2>Aria-toogle</h2>
+        <p>ARIA toggle fields must have an accessible name</p>
+        <div className="test-case-container">
+          <h6>Tags with roles like switch must have an acessible name 🚫</h6>
           <div id="fail5" role="switch" aria-checked="true">
             <span></span>
             <span></span>
@@ -416,9 +319,12 @@ export default function AllTests() {
         </div>
       </div>
       <div>
-        <h2>ARIA-VALID-ATTR-VALUE TESTS</h2>
+        <h2>Aria-valid-attr-value</h2>
+        <p>ARIA attributes must conform to valid values</p>
         <div
+        className="test-case-container"
         >
+          <h6>The inputs have no accessible names 🚫</h6>
           <input type="number" aria-valuemin="sadasdasdas"></input>
           <button role="tab" aria-selected="doaksdokoaksadsok">Tab 1</button>
           <div role="alert" aria-relevant="additidsdsons, remodsdsvals">New messages</div>
