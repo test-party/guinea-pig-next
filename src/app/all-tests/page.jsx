@@ -31,7 +31,8 @@ export default function AllTests() {
 
 
           {/* Single Nonexistent ID with No Close Match */}
-          <div>
+          <div className="test-case-container">
+            <h6>No match id for "Home" link aria-labelledby attribute 🚫</h6>
             <div role="link" id="home-link" aria-labelledby="start-page">Home</div>
             {/* Existing IDs in the DOM */}
             <nav id="main-nav">...</nav>
@@ -40,7 +41,8 @@ export default function AllTests() {
 
 
           {/* Case Sensitivity Issues */}
-          <div>
+          <div className="test-case-container">
+            <h6>"Contact Us" has a aria-labelledby matching text but with with lower case letters (case sensitive) 🚫</h6>
             <div role="link" id="contact-us-link" aria-labelledby="ContactUsHeading"></div>
             {/* Existing IDs in the DOM */}
             <h2 id="contactusheading">Contact Us</h2>
@@ -48,7 +50,8 @@ export default function AllTests() {
 
 
           {/* Empty aria-labelledby Attribute */}
-          <div>
+          <div className="test-case-container">
+          <h6>"Refresh Page" button has aria-labelledby but this is empty 🚫</h6>
             <div role="button" id="refresh-btn" aria-labelledby=""></div>
             {/* Existing IDs in the DOM */}
             <span id="refresh-text">Refresh Page</span>
@@ -56,7 +59,8 @@ export default function AllTests() {
 
 
           {/* Multiple Nonexistent IDs with Close Matches */}
-          <div>
+          <div className="test-case-container">
+          <h6>Both labels are similar to the button aria-labelledby attribute 🚫</h6>
             <div role="button" id="confirmation-dialog" aria-labelledby="dialog-title dialog-desc"></div>
             {/* Existing IDs in the DOM */}
             <h3 id="dialog-header">Confirm Action</h3>
