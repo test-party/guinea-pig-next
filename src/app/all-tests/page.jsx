@@ -580,7 +580,7 @@ export default function AllTests() {
       </div>
       <div>
         <h2>SVG-IMG-ALT TESTS</h2>
-        <div className={inter.className}>
+        <div>
           <div onClick={() => { }}>
             <svg
               id="Layer_1"
