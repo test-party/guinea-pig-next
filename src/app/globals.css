@@ -6,7 +6,8 @@
     @apply w-full;
 }
 .children-test-container > * {
-    @apply flex flex-col items-start justify-start p-6 bg-white rounded-lg shadow-md w-full h-full flex-grow;
+    @apply flex flex-wrap flex-col items-start justify-start p-6 bg-white rounded-lg shadow-md w-full h-full flex-grow;
+    overflow-x: hidden;
 }
 
 .children-test-container > div > h2 {
@@ -18,7 +19,7 @@
 }
 
 .test-case-container {
-    @apply flex flex-col items-start justify-start p-6 mb-4 bg-white rounded-lg shadow-md w-full h-full  flex-grow flex-1 min-w-max border-4 border-black;
+    @apply flex flex-col items-start justify-start p-6 mb-4 bg-white rounded-lg shadow-md h-full flex-1 border-4 border-black;
 }
 
 .test-case-container > h6 {
