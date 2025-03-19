@@ -43,7 +43,7 @@ export default function AllTests() {
               href={`#${item}`}
               className={linkStyle}
             >
-              <h6>{item}</h6>
+              <p>{item}</p>
             </a>
           )
         })}
