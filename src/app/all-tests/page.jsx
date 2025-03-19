@@ -5,14 +5,14 @@ let ids = [];
 for (var i = 0; i < 2; i++) {
   ids.push(i + 3);
 }
-const titleStyle ="text-4xl font-bold"
+const titleStyle = "text-4xl font-bold"
 
 export default function AllTests() {
 
   return (
     <div className="flex flex-col items-center justify-start p-8 space-y-4 !bg-blue-500 children-test-container">
       <h1 className={titleStyle}>Not Compliant tests</h1>
-      
+
       <div>
         <h2>Aria-command-name (labbeledby cases)</h2>
         <p>Elements with role="link", role="button", or role="menuitem" must have one of the following characteristics: Inner text that is discernible to screen reader users,Non-empty aria-label attribute,aria-labelledby pointing to element with text which is discernible to screen reader users.</p>
@@ -51,7 +51,7 @@ export default function AllTests() {
 
           {/* Empty aria-labelledby Attribute */}
           <div className="test-case-container">
-          <h6>"Refresh Page" button has aria-labelledby but this is empty 🚫</h6>
+            <h6>"Refresh Page" button has aria-labelledby but this is empty 🚫</h6>
             <div role="button" id="refresh-btn" aria-labelledby=""></div>
             {/* Existing IDs in the DOM */}
             <span id="refresh-text">Refresh Page</span>
@@ -60,7 +60,7 @@ export default function AllTests() {
 
           {/* Multiple Nonexistent IDs with Close Matches */}
           <div className="test-case-container">
-          <h6>Both labels are similar to the button aria-labelledby attribute 🚫</h6>
+            <h6>Both labels are similar to the button aria-labelledby attribute 🚫</h6>
             <div role="button" id="confirmation-dialog" aria-labelledby="dialog-title dialog-desc"></div>
             {/* Existing IDs in the DOM */}
             <h3 id="dialog-header">Confirm Action</h3>
@@ -68,7 +68,8 @@ export default function AllTests() {
           </div>
 
           {/* One Nonexistent ID and One with a Close Match */}
-          <div>
+          <div className="test-case-container">
+            <h6>One part of labelledby attribute does'nt exist 🚫</h6>
             <div role="button" id="confirmation-dialog" aria-labelledby="dialog-title dialog-descriptions"></div>
             {/* Existing IDs in the DOM */}
             <h3 id="dialog-header">Confirm Action</h3>
@@ -77,24 +78,30 @@ export default function AllTests() {
         </div>
       </div>
       <div>
-        <h2>ARIA-COMMAND-NAME OTHER CASES</h2>
+        <h2>Aria-command-name (other cases)</h2>
+        <p>Elements with role="link", role="button", or role="menuitem" must have one of the following characteristics: Inner text that is discernible to screen reader users,Non-empty aria-label attribute,aria-labelledby pointing to element with text which is discernible to screen reader users.</p>
         <div>
-          <h2>Passed Examples</h2>
+          <div className="test-case-container">
+            <h6>Passed Examples</h6>
 
-          <div role="link" id="al" aria-label="Name"></div>
-          <div role="button" id="alb" aria-labelledby="labeldiv"></div>
-          <div id="labeldiv">Button label</div>
-          <div role="menuitem" id="combo" aria-label="Aria Name">Name</div>
-          <div role="link" id="title" title="Title"></div>
+            <div role="link" id="al" aria-label="Name"></div>
+            <div role="button" id="alb" aria-labelledby="labeldiv"></div>
+            <div id="labeldiv">Button label</div>
+            <div role="menuitem" id="combo" aria-label="Aria Name">Name</div>
+            <div role="link" id="title" title="Title"></div>
+          </div>
+          <div className="test-case-container">
+            <h6>Div without name associated with it 🚫</h6>
 
-          <h2>Failed Examples with Real-Life Context</h2>
+            <footer>
+              <h2>Stay Connected</h2>
+              <div role="link" id="empty"></div>
+              <p>Follow us on social media for updates</p>
+            </footer>
+          </div>
 
-          <footer>
-            <h2>Stay Connected</h2>
-            <div role="link" id="empty"></div>
-            <p>Follow us on social media for updates</p>
-          </footer>
-
+          <div className="test-case-container">
+            <h6>Missing aria-label on links 🚫</h6>
           <article>
             <h1>How to Build an Accessible Website</h1>
             <p>Web accessibility is crucial to ensuring your website is usable by all visitors...</p>
@@ -119,7 +126,9 @@ export default function AllTests() {
               </ul>
             </section>
           </article>
-
+          
+          
+          
           <section>
             <h2>Register for the Event</h2>
             <form>
@@ -151,7 +160,9 @@ export default function AllTests() {
               </fieldset>
             </form>
           </section>
+          
 
+         
           <section>
             <h2>Contact Us</h2>
             <form>
@@ -235,17 +246,23 @@ export default function AllTests() {
               </div>
             </div>
           </nav>
+          </div>
         </div>
       </div>
       <div>
-        <h1>ARIA-DEPRECATED-ROLE</h1>
-        <div role="directory">
-          <p>ABC</p>
-        </div>
+        <h2>Aria-deprecated-role</h2>
+        <p>Deprecated roles should not be used</p>
+        <div className="test-case-container">
+          <h6>Div with depracted role "directory" 🚫</h6>
+          <div role="directory">
+            <p>Page content example</p>
+          </div>
+          </div>
       </div>
       <div>
-        <h2>ARIA-INIVALID-ATTRIBUTE TESTS</h2>
-        <div>
+        <h2>Aria-invalid-attribute</h2>
+        <p></p>
+        <div className="test-case-container">
           <div>
             <p aria-checked="true">ABC</p>
           </div>
