@@ -42,7 +42,6 @@ export default function AllTests() {
               key={item}
               href={`#${item}`}
               className={linkStyle}
-              onClick={(e) => e.preventDefault() }
             >
               <p>{item}</p>
             </a>
