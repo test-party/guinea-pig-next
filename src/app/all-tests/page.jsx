@@ -718,7 +718,7 @@ export default function AllTests() {
           </div>
         </div>
       </div>
-      <div id="images">
+      <div id="image-alt">
         <h2>image-alt</h2>
         <p>Images must have alternate text</p>
         <div >
