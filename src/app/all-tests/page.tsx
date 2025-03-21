@@ -296,6 +296,8 @@ export default function AllTests() {
       <p style={{ color: "#cccccc", backgroundColor: "#ffffff" }}>
         Inline: Poor Contrast (Light Gray on White)
       </p>
+      <input type="image" src="./submit.png" name="submit"
+            height="36" width="113"/>
     </div>
   );
 }
