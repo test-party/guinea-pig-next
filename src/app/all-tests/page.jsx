@@ -26,7 +26,8 @@ const linkList = [
   "neurodiversity ruleset",
   "scrollable-region-focusable",
   "select-name",
-  "svg-img-alt"
+  "svg-img-alt",
+  "image-alt"
 ];
 
 
