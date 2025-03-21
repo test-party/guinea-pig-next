@@ -717,6 +717,18 @@ export default function AllTests() {
           </div>
         </div>
       </div>
+      <div id="images">
+        <h2>image-alt</h2>
+        <p>Images must have alternate text</p>
+        <div >
+          <div className="test-case-container">
+            <h6>Images without and alternative text related 🚫</h6>
+            {ids.map((id) => {
+                return <div key={id}><img className="object-fill w-full h-full" key={id} src={`https://picsum.photos/id/${id}/200/300`}></img></div>
+            })}
+          </div>
+        </div> 
+      </div>
     </div>
   );
 }
