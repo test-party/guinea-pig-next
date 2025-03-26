@@ -1,7 +1,14 @@
 const Page = () => {
     return (
         <div>
-            <div role="tooltip" id="alempty">LABEL</div>
+            <div role="tooltip" id="empty"></div>
+
+            <div role="tooltip" id="alempty" aria-label=""></div>
+
+            <div role="tooltip" id="albmissing" aria-labelledby="nonexistent"></div>
+
+            <div role="tooltip" id="albempty" aria-labelledby="emptydiv"></div>
+            <div id="emptydiv"></div>
         </div>
     );
 };
