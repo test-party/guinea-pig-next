@@ -1,7 +1,7 @@
 const Page = () => {
     return (
         <div>
-            <div role="tooltip" id="alempty" aria-label=""></div>
+            <div role="tooltip" id="alempty">LABEL</div>
         </div>
     );
 };
