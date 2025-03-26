@@ -7,6 +7,9 @@ for (var i = 0; i < 2; i++) {
 }
 const titleStyle = "text-4xl font-bold"
 const linkStyle = "flex flex-col items-center justify-center p-6 mb-4 bg-[#201f65] rounded-lg shadow-md w-full h-full flex-grow flex-1 min-w-max text-white text-center text-lg font-bold"
+const redDivStyle = "text-white bg-red-500 p-[10px] mt-[20px] rounded font-bold min-h-[48px]"
+const blueButton = "bg-blue-500 text-white border border-black p-2 rounded max-w-xs w-full min-h-[48px]"
+const redButton = "bg-red-500 text-white  p-2 rounded max-w-xs w-full min-h-[48px]"
 
 const linkList = [
   "aria-command-name",
@@ -27,7 +30,9 @@ const linkList = [
   "scrollable-region-focusable",
   "select-name",
   "svg-img-alt",
-  "image-alt"
+  "image-alt",
+  "aria-roles",
+  "aria-tooltip-name"
 ];
 
 
@@ -315,20 +320,20 @@ export default function AllTests() {
         <p>Required ARIA attributes must be provided</p>
         <div className="test-case-container">
           <h6>Divs has no all required attributes 🚫</h6>
-          <div role="combobox" aria-expanded="true" aria-controls=""></div>
-          <div role="combobox" aria-expanded="true"></div>
-          <div role="combobox" aria-controls=""></div>
-          <div role="combobox" ></div>
-          <div role="switch"></div>
-          <div role="checkbox"></div>
-          <div role="menu">
+          <div role="combobox" aria-expanded="true" aria-controls="" className={redDivStyle}></div>
+          <div role="combobox" aria-expanded="true" className={redDivStyle}></div>
+          <div role="combobox" aria-controls="" className={redDivStyle}></div>
+          <div role="combobox" className={redDivStyle}></div>
+          <div role="switch" className={redDivStyle}></div>
+          <div role="checkbox" className={redDivStyle}></div>
+          <div role="menu" className={redDivStyle}>
             <div role="menuitemcheckbox"></div>
             <div role="menuitemcheckbox"></div>
             <div role="menuitemradio"></div>
           </div>
-          <div role="radio"></div>
-          <div role="scrollbar"></div>
-          <div role="slider"></div>
+          <div role="radio" className={redDivStyle}></div>
+          <div role="scrollbar" className={redDivStyle}></div>
+          <div role="slider" className={redDivStyle}></div>
         </div>
       </div>
       <div id="aria-required-parent">
@@ -338,7 +343,7 @@ export default function AllTests() {
           <div className="test-case-container">
             <h6>Cell with role cell needs row on parent option 🚫</h6>
             <div>
-              <div role="cell">This Cell needs row and row&apos;s parent options</div>
+              <div role="cell" className={redDivStyle}>This Cell needs row and row&apos;s parent options</div>
             </div>
           </div>
 
@@ -349,7 +354,7 @@ export default function AllTests() {
         <p>ARIA toggle fields must have an accessible name</p>
         <div className="test-case-container">
           <h6>Tags with roles like switch must have an acessible name 🚫</h6>
-          <div id="fail5" role="switch" aria-checked="true">
+          <div id="fail5" role="switch" aria-checked="true" className={redDivStyle}>
             <span></span>
             <span></span>
           </div>
@@ -362,17 +367,20 @@ export default function AllTests() {
           className="test-case-container"
         >
           <h6>The inputs have no accessible names 🚫</h6>
-          <input type="number" aria-valuemin="sadasdasdas"></input>
-          <button role="tab" aria-selected="doaksdokoaksadsok">Tab 1</button>
-          <div role="alert" aria-relevant="additidsdsons, remodsdsvals">New messages</div>
-          <div aria-modal="balse">test</div>
+          <div className={redDivStyle}>
+            <p>Input type number with wrong type on value (string)</p>
+            <input type="number" aria-valuemin="sadasdasdas"></input>
+          </div>
+          <button role="tab" aria-selected="doaksdokoaksadsok" className={redDivStyle}>Element with role tab and wrong aria-selected attribute value.</button>
+          <div role="alert" aria-relevant="additidsdsons, remodsdsvals" className={redDivStyle}>aria-relevant with wrong values.</div>
+          <div aria-modal="balse" className={redDivStyle}>aria-modal div with wrong value.</div>
           <div>
-            <p id="more-info">This button submits your form and saves your data.</p>
-            <button aria-details="wrong-id">Submit</button>
+            <p id="more-info" className="my-2">This button submits your form and saves your data (it have wrong value on aria-details attribute)</p>
+            <button aria-details="wrong-id" className={blueButton}>Submit</button>
           </div>
           <div>
-            <div id="submit-button">This buttons access the submition</div>
-            <button aria-owns={false}>Click Me</button>
+            <div id="submit-button" className="my-2">This buttons access the submition (it have wrong value on aria-owns attribute)</div>
+            <button aria-owns={false} className={blueButton}>Click Me</button>
           </div>
         </div>
       </div>
@@ -381,7 +389,7 @@ export default function AllTests() {
         <p>"blink" elements are deprecated and must not be used</p>
         <div className="test-case-container">
           <h6>No content shoul be wrapped in a blink tag 🚫</h6>
-          <blink>Example blink-tag</blink>
+          <blink className={redDivStyle}>Example blink-tag</blink>
         </div>
       </div>
       <div id="button-name">
@@ -390,7 +398,7 @@ export default function AllTests() {
         <div className="test-case-container">
           <h6>Button without accessible name 🚫</h6>
           <p>click below to subscribe!</p>
-          <button role="button"></button>
+          <button role="button" className={redButton} ></button>
         </div>
       </div>
       <div id="color-contrast">
@@ -445,10 +453,10 @@ export default function AllTests() {
           <h6>Input buttons without an acessible name 🚫</h6>
           <form action="#">
             <label id="submit-here"></label>
-            <input type="button" aria-labelledby="submit-here" />
+            <input type="button" aria-labelledby="submit-here" className={redDivStyle} />
           </form>
           <form action="#">
-            <input type="button" id="first-name" />
+            <input type="button" id="first-name" className={redDivStyle} />
           </form>
         </div>
       </div>
@@ -457,7 +465,7 @@ export default function AllTests() {
         <p>Links must have discernible text</p>
         <div className="test-case-container">
           <h6>Link without acessible name 🚫</h6>
-          <a href='https://www.google.com'></a>
+          <a href='https://www.google.com' className={redDivStyle}></a>
         </div>
       </div>
       <div id="meta-refresh">
@@ -719,7 +727,7 @@ export default function AllTests() {
         </div>
       </div>
       <div id="image-alt">
-        <h2>image-alt</h2>
+        <h2>Image-alt</h2>
         <p>Images must have alternate text</p>
         <div >
           <div className="test-case-container">
@@ -748,7 +756,7 @@ export default function AllTests() {
 
                     <area shape="rect" coords="224,30,276,82"
                       href="https://media.geeksforgeeks.org/wp-content/uploads/20190227170021/area4.png"
-                       />
+                    />
                   </map>
                   <svg role="img" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"><path d="M8.49,12.68v4.61c0,.34,.23,.61,.53,.71v5.48c0,.13-.14,3.21,1.88,5.34,1.22,1.28,2.93,1.94,5.09,1.94s3.88-.65,5.09-1.94c2.02-2.13,1.89-5.21,1.88-5.3v-5.52c.3-.1,.53-.37,.53-.71v-4.61c1.71-.69,2.92-2.36,2.92-4.32,0-2.57-2.09-4.67-4.67-4.67-.49,0-.98,.08-1.46,.23-1.09-1.67-2.93-2.68-4.94-2.68s-3.68,.91-4.79,2.46c-2.74-.22-5.01,1.96-5.01,4.65,0,1.96,1.21,3.63,2.92,4.32Zm11.51,15.11c-.92,.97-2.27,1.46-4,1.46s-3.07-.49-4-1.46c-1.58-1.66-1.48-4.21-1.48-4.28v-5.48h10.96v5.51s.1,2.58-1.48,4.24Zm2.01-14.77v3.51H9.99v-3.51h12.02ZM10.23,5.19c.21,0,.4,.02,.59,.05,.3,.05,.61-.09,.77-.35,.81-1.34,2.22-2.15,3.78-2.15,1.68,0,3.19,.94,3.95,2.45,.09,.18,.25,.31,.43,.38,.19,.06,.39,.05,.57-.04,.45-.23,.95-.35,1.44-.35,1.75,0,3.17,1.42,3.17,3.17s-1.42,3.17-3.17,3.17H10.23c-1.75,0-3.17-1.42-3.17-3.17s1.42-3.17,3.17-3.17Z" /><path d="M14.26,5.25c1.5,.28,2.59,1.59,2.59,3.11,0,.41,.34,.75,.75,.75s.75-.34,.75-.75c0-2.24-1.6-4.17-3.81-4.59-.4-.07-.8,.19-.88,.6-.08,.41,.19,.8,.6,.88Z" /><circle cx="13.32" cy="20.07" r="1.25" /><circle cx="18.68" cy="20.07" r="1.25" /><path d="M17.56,24.5h-3.12c-.41,0-.75,.34-.75,.75s.34,.75,.75,.75h3.12c.41,0,.75-.34,.75-.75s-.34-.75-.75-.75Z" /></svg>
                 </div>
@@ -757,7 +765,44 @@ export default function AllTests() {
           </div>
         </div>
       </div>
+      <div id="aria-roles">
+        <h2>Aria-roles</h2>
+        <p>ARIA roles used must conform to valid values</p>
+        <div >
+          <div className="test-case-container">
+            <h6>Aria-roles without valid values by tag 🚫</h6>
+            <div role="buttonish" className={redDivStyle}>
+              Invalid role: "buttonish"
+            </div>
+            <div role="headingg" aria-level="2" className={redDivStyle}>
+              Invalid role: "headingg"
+            </div>
+            <div role="select" className={redDivStyle}>
+              Invalid role: "select" (abstract role)
+            </div>
+            <span role="superstar" className={redDivStyle}>
+              Invalid role: "superstar"
+            </span>
 
+            <p role="navigation" className={redDivStyle}>
+              Paragraph with role "navigation" — not valid for this tag
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="aria-tooltip-name">
+        <h2>Aria-tooltip-name</h2>
+        <p>ARIA tooltip must have an accessible name</p>
+        <div >
+          <div className="test-case-container">
+            <h6>Aria-tooltips without valid names 🚫</h6>
+            <div role="tooltip" className={redDivStyle}>
+            </div>
+            <div role="tooltip" aria-labelledby="missing-label" className={redDivStyle}>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
