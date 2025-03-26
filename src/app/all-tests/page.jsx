@@ -360,7 +360,7 @@ export default function AllTests() {
         </div>
       </div>
       <div id="aria-toggle">
-        <h2>Aria-toogle</h2>
+        <h2>Aria-toggle</h2>
         <p>ARIA toggle fields must have an accessible name</p>
         <div className="test-case-container">
           <h6>Tags with roles like switch must have an accessible name 🚫</h6>
