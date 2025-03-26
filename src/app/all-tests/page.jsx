@@ -795,7 +795,7 @@ export default function AllTests() {
         <p>ARIA tooltip must have an accessible name</p>
         <div >
           <div className="test-case-container">
-            <h6>Aria-tooltips without valid names 🚫</h6>
+            <h6>Aria-tooltip divs without any text inside or any aria-label 🚫</h6>
             <div role="tooltip" className={redDivStyle}>
             </div>
             <div role="tooltip" aria-labelledby="missing-label" className={redDivStyle}>
