@@ -6,7 +6,7 @@ for (var i = 0; i < 2; i++) {
   ids.push(i + 3);
 }
 const titleStyle = "text-4xl font-bold"
-const linkStyle = "flex flex-col items-center justify-center p-6 mb-4 bg-[#201f65] rounded-lg shadow-md w-full h-full flex-grow flex-1 min-w-max text-white text-center text-lg font-bold"
+const linkStyle = "flex flex-col items-center justify-center p-6 mb-4 bg-[#201f65] rounded-lg shadow-md w-full h-full flex-grow flex-1 min-w-max text-white text-center text-sm font-bold"
 const redDivStyle = "text-white bg-red-500 p-[10px] mt-[20px] rounded font-bold min-h-[48px]"
 const blueButton = "bg-blue-500 text-white border border-black p-2 rounded max-w-xs w-full min-h-[48px]"
 const redButton = "bg-red-500 text-white  p-2 rounded max-w-xs w-full min-h-[48px]"
@@ -41,7 +41,7 @@ export default function AllTests() {
   return (
     <div className="flex flex-col items-center justify-start p-8 space-y-4 !bg-blue-500 children-test-container">
       <h1 className={titleStyle}>Not Compliant tests</h1>
-      <div className="!grid grid-cols-3 gap-4 w-full p-4">
+      <div className="!grid grid-cols-1 md:grid-cols-3 gap-4">
         {linkList.map(item => {
           return (
             <a
@@ -49,7 +49,7 @@ export default function AllTests() {
               href={`#${item}`}
               className={linkStyle}
             >
-              <p>{item}</p>
+              <p className="w-20 sm:w-36 lg:w-56">{item}</p>
             </a>
           )
         })}
@@ -62,7 +62,7 @@ export default function AllTests() {
 
           {/* Single Nonexistent ID with a Close Match */}
           <div className="test-case-container">
-            <h6>"Save changes" has id pointing to a button who as a wrong aria-labelledby attribute 🚫</h6>
+            <h6>"Save changes" has id pointing to a button which has a wrong aria-labelledby attribute 🚫</h6>
             <div role="button" id="save-btn" aria-labelledby="sav-label"></div>
             {/* Existing IDs in the DOM */}
             <span id="save-label">Save Changes</span>
@@ -74,7 +74,7 @@ export default function AllTests() {
 
           {/* Single Nonexistent ID with No Close Match */}
           <div className="test-case-container">
-            <h6>No match id for "Home" link aria-labelledby attribute 🚫</h6>
+            <h6>No matching id for "Home" link's aria-labelledby attribute 🚫</h6>
             <div role="link" id="home-link" aria-labelledby="start-page">Home</div>
             {/* Existing IDs in the DOM */}
             <nav id="main-nav">...</nav>
@@ -84,7 +84,7 @@ export default function AllTests() {
 
           {/* Case Sensitivity Issues */}
           <div className="test-case-container">
-            <h6>"Contact Us" has a aria-labelledby matching text but with with lower case letters (case sensitive) 🚫</h6>
+          <h6>"Contact Us" has an aria-labelledby matching text but with lowercase letters (case sensitive) 🚫</h6>
             <div role="link" id="contact-us-link" aria-labelledby="ContactUsHeading"></div>
             {/* Existing IDs in the DOM */}
             <h2 id="contactusheading">Contact Us</h2>
@@ -93,7 +93,7 @@ export default function AllTests() {
 
           {/* Empty aria-labelledby Attribute */}
           <div className="test-case-container">
-            <h6>"Refresh Page" button has aria-labelledby but this is empty 🚫</h6>
+          <h6>"Refresh Page" button has aria-labelledby but value is empty 🚫</h6>
             <div role="button" id="refresh-btn" aria-labelledby=""></div>
             {/* Existing IDs in the DOM */}
             <span id="refresh-text">Refresh Page</span>
@@ -464,7 +464,7 @@ export default function AllTests() {
         <h2>Link-name</h2>
         <p>Links must have discernible text</p>
         <div className="test-case-container">
-          <h6>Link without acessible name 🚫</h6>
+          <h6>Link without accessible name 🚫</h6>
           <a href='https://www.google.com' className={redDivStyle}></a>
         </div>
       </div>
@@ -731,14 +731,14 @@ export default function AllTests() {
         <p>Images must have alternate text</p>
         <div >
           <div className="test-case-container">
-            <h6>Images without and alternative text related 🚫</h6>
+          <h6>Images without any alternative text 🚫</h6>
             <div className="min-h-screen grid grid-cols-3 gap-4 p-24">
               {ids.map((id) => {
                 return <div key={id}><img className="object-fill w-full h-full" key={id} src={`https://picsum.photos/id/${id}/200/300`}></img></div>
               })}
             </div>
 
-            <h6>Area images without and alternative text related 🚫</h6>
+            <h6>Area images without any alternative text related 🚫</h6>
             <div className="min-h-screen grid grid-cols-3 gap-4 p-24">
               <div>
                 <div>
