@@ -8,7 +8,7 @@ const Page = () => {
             <div role="tooltip" id="albmissing" aria-labelledby="nonexistent"></div>
 
             <div role="tooltip" id="albempty" aria-labelledby="emptydiv"></div>
-            <div id="emptydiv"></div>
+            <div id="emptydiv" aria-label=""></div>
         </div>
     );
 };
