@@ -7,7 +7,7 @@ for (var i = 0; i < 2; i++) {
 }
 const titleStyle = "text-4xl font-bold"
 const linkStyle = "flex flex-col items-center justify-center p-6 mb-4 bg-[#201f65] rounded-lg shadow-md w-full h-full flex-grow flex-1 min-w-max text-white text-center text-sm font-bold"
-const redDivStyle = "text-white bg-red-500 p-[10px] mt-[20px] rounded font-bold min-h-[48px]"
+const redDivStyle = "text-white bg-red-500 p-[10px] my-[10px] rounded font-bold min-h-[48px]"
 const blueButton = "bg-blue-500 text-white border border-black p-2 rounded max-w-xs w-full min-h-[48px]"
 const redButton = "bg-red-500 text-white  p-2 rounded max-w-xs w-full min-h-[48px]"
 
@@ -17,7 +17,7 @@ const linkList = [
   "aria-meter-name",
   "aria-required-attr",
   "aria-required-parent",
-  "aria-toogle",
+  "aria-toggle",
   "aria-valid-attr-value",
   "blink-tag",
   "button-name",
@@ -111,7 +111,7 @@ export default function AllTests() {
 
           {/* One Nonexistent ID and One with a Close Match */}
           <div className="test-case-container">
-            <h6>One part of labelledby attribute does'nt exist 🚫</h6>
+            <h6>One part of aria-labelledby attribute doesn't exist 🚫</h6>
             <div role="button" id="confirmation-dialog" aria-labelledby="dialog-title dialog-descriptions"></div>
             {/* Existing IDs in the DOM */}
             <h3 id="dialog-header">Confirm Action</h3>
@@ -121,10 +121,10 @@ export default function AllTests() {
       </div>
       <div >
         <h2>Aria-command-name (other cases)</h2>
-        <p>Elements with role="link", role="button", or role="menuitem" must have one of the following characteristics: Inner text that is discernible to screen reader users,Non-empty aria-label attribute,aria-labelledby pointing to element with text which is discernible to screen reader users.</p>
+        <p>Elements with role="link", role="button", or role="menuitem" must have one of the following characteristics: (1) Inner text that is discernible to screen reader users (2) Non-empty aria-label attribute (3) aria-labelledby pointing to element with text which is discernible to screen reader users.</p>
         <div>
           <div className="test-case-container">
-            <h6>Passed Examples</h6>
+            <h6>Pass Examples</h6>
 
             <div role="link" id="al" aria-label="Name"></div>
             <div role="button" id="alb" aria-labelledby="labeldiv"></div>
@@ -305,7 +305,7 @@ export default function AllTests() {
         <h2>Aria-meter-name</h2>
         <p>Aria meter nodes must have an accessible name.</p>
         <div className="test-case-container">
-          <h6>Divs with role "meter" has no accessible name🚫</h6>
+          <h6>Divs with role "meter" has no accessible name 🚫</h6>
           <div role="meter" id="empty"></div>
           <div role="meter" id="alempty" aria-label=""></div>
           <div role="meter" id="albmissing" aria-labelledby="nonexistent"></div>
@@ -319,20 +319,30 @@ export default function AllTests() {
         <h2>Aria-required-attr</h2>
         <p>Required ARIA attributes must be provided</p>
         <div className="test-case-container">
-          <h6>Divs has no all required attributes 🚫</h6>
+          <h6>Divs do not have all required attributes 🚫</h6>
+          <p>Empty aria-controls attribute (aria-controls is required for "combobox" role)</p>
           <div role="combobox" aria-expanded="true" aria-controls="" className={redDivStyle}></div>
+          <p>No aria-controls attribute defined (aria-controls is required for "combobox" role)</p>
           <div role="combobox" aria-expanded="true" className={redDivStyle}></div>
+          <p>Empty aria-controls attribute (aria-controls is required for "combobox" role) and no aria-expanded attribute (aria-expanded is required for "combobox" role)</p>
           <div role="combobox" aria-controls="" className={redDivStyle}></div>
+          <p>No aria-controls attribute (aria-controls is required for "combobox" role) and no aria-expanded attribute (aria-expanded is required for "combobox" role)</p>
           <div role="combobox" className={redDivStyle}></div>
+          <p>No aria-checked attribute (aria-checked is required for "switch" role)</p>
           <div role="switch" className={redDivStyle}></div>
+          <p>No aria-checked attribute (aria-checked is required for "checkbox" role)</p>
           <div role="checkbox" className={redDivStyle}></div>
+          <p>No aria-checked attribute ("menuitemcheckbox" and "menuitemradio" roles requires aria-checked)</p>
           <div role="menu" className={redDivStyle}>
             <div role="menuitemcheckbox"></div>
             <div role="menuitemcheckbox"></div>
             <div role="menuitemradio"></div>
           </div>
+          <p>No aria-checked attribute (aria-checked is required for "radio role")</p>
           <div role="radio" className={redDivStyle}></div>
+          <p>No aria-valuemax,aria-valuemin,aria-valuenow attributes (all required for "scrollbar" role)</p>
           <div role="scrollbar" className={redDivStyle}></div>
+          <p>No aria-valuemax,aria-valuemin,aria-valuenow attributes (all required for "slider" role)</p>
           <div role="slider" className={redDivStyle}></div>
         </div>
       </div>
@@ -341,19 +351,19 @@ export default function AllTests() {
         <p>Certain ARIA roles must be contained by particular parent elements</p>
         <div>
           <div className="test-case-container">
-            <h6>Cell with role cell needs row on parent option 🚫</h6>
+            <h6>Cell with role \"cell\" needs row on parent option 🚫</h6>
             <div>
-              <div role="cell" className={redDivStyle}>This Cell needs row and row&apos;s parent options</div>
+            <div role="cell" className={redDivStyle}>This cell needs row and row&apos;s parent options</div>
             </div>
           </div>
 
         </div>
       </div>
-      <div id="aria-toogle">
+      <div id="aria-toggle">
         <h2>Aria-toogle</h2>
         <p>ARIA toggle fields must have an accessible name</p>
         <div className="test-case-container">
-          <h6>Tags with roles like switch must have an acessible name 🚫</h6>
+          <h6>Tags with roles like switch must have an accessible name 🚫</h6>
           <div id="fail5" role="switch" aria-checked="true" className={redDivStyle}>
             <span></span>
             <span></span>
@@ -375,11 +385,11 @@ export default function AllTests() {
           <div role="alert" aria-relevant="additidsdsons, remodsdsvals" className={redDivStyle}>aria-relevant with wrong values.</div>
           <div aria-modal="balse" className={redDivStyle}>aria-modal div with wrong value.</div>
           <div>
-            <p id="more-info" className="my-2">This button submits your form and saves your data (it have wrong value on aria-details attribute)</p>
+            <p id="more-info" className="my-2">This button submits your form and saves your data (it has the wrong value on aria-details attribute)</p>
             <button aria-details="wrong-id" className={blueButton}>Submit</button>
           </div>
           <div>
-            <div id="submit-button" className="my-2">This buttons access the submition (it have wrong value on aria-owns attribute)</div>
+            <div id="submit-button" className="my-2">This buttons access the submition (it has the wrong value on aria-owns attribute)</div>
             <button aria-owns={false} className={blueButton}>Click Me</button>
           </div>
         </div>
@@ -397,7 +407,7 @@ export default function AllTests() {
         <p>Buttons must have discernible text</p>
         <div className="test-case-container">
           <h6>Button without accessible name 🚫</h6>
-          <p>click below to subscribe!</p>
+          <p>Click below to subscribe!</p>
           <button role="button" className={redButton} ></button>
         </div>
       </div>
@@ -450,11 +460,13 @@ export default function AllTests() {
         <h2>Input-button-name</h2>
         <p>Input buttons must have discernible text.</p>
         <div className="test-case-container">
-          <h6>Input buttons without an acessible name 🚫</h6>
+          <h6>Input buttons without an accessible name 🚫</h6>
+          <p>Button with aria-labelledy pointing for a component wich doesn't have an accessible name</p>
           <form action="#">
             <label id="submit-here"></label>
             <input type="button" aria-labelledby="submit-here" className={redDivStyle} />
-          </form>
+          </form>  
+          <p>Button without any accessible name</p>        
           <form action="#">
             <input type="button" id="first-name" className={redDivStyle} />
           </form>
@@ -506,7 +518,7 @@ export default function AllTests() {
           <p>This text is working well , no remediations needed </p>
         </div>
         <div className="test-case-container">
-          <h6>Abbreviations (abbreviations should be wrapped in an abbr tag with his meaning on title attribute)🚫</h6>
+          <h6>{`Abbreviations (abbreviations should be wrapped in an <abbr> tag with his meaning on title attribute)🚫`}</h6>
           <p>The FBI is an american agency</p>
           <p>The FMI is an american agency</p>
           <p>This text is working well , no remediations needed </p>
@@ -524,7 +536,7 @@ export default function AllTests() {
       </div>
       <div id="scrollable-region-focusable">
         <h2>Scrollable-region-focusable</h2>
-        <p>Ensure that scrollable region has keyboard access</p>
+        <p>Ensure that a scrollable region has keyboard access</p>
         <div class="flex flex-col md:flex-row gap-3 p-3">
           {/* Scrollable section (compliant) */}
           <div
@@ -557,7 +569,7 @@ export default function AllTests() {
         <h2>Select-name</h2>
         <p>Select element must have an accessible name</p>
         <div className="test-case-container">
-          <h6>Selects without an acessible name on options 🚫</h6>
+          <h6>Select without an acessible name on options 🚫</h6>
           <label>Choose a pet:</label>
           <select name="pets" id="pet-select">
             <option value="">--Please choose an option--</option>
@@ -582,7 +594,7 @@ export default function AllTests() {
         <p>SVG images and graphics require accessible text</p>
         <div >
           <div onClick={() => { }} className="test-case-container">
-            <h6>Action svgs must have an acessible name related with svg 🚫</h6>
+            <h6>Action SVGs must have an accessible name related with the SVG 🚫</h6>
             <svg
               id="Layer_1"
               data-name="Layer 1"
@@ -684,7 +696,7 @@ export default function AllTests() {
             </svg>
           </div>
           <div className="test-case-container">
-            <h6>Non-Action svgs must have some label related with svg 🚫</h6>
+            <h6>Non-action SVGs must have some label related with the SVG 🚫</h6>
             <svg
               id="Layer_1"
               data-name="Layer 1"
