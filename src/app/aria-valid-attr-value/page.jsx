@@ -4,7 +4,7 @@ const inter = Inter({ subsets: ['latin'] })
 //http://localhost:3000/aria-valid-attr-value
 export default function Page() {
   return (
-    <body
+    <div
       className={inter.className}>
       <input type="number" aria-valuemin="sadasdasdas"></input>
       <button role="tab" aria-selected="doaksdokoaksadsok">Tab 1</button>
@@ -18,6 +18,6 @@ export default function Page() {
         <div id="submit-button">This buttons access the submition</div>
         <button aria-owns={false}>Click Me</button>
       </div>
-    </body>
+    </div>
   );
 }

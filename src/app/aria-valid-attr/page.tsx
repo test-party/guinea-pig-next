@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ['latin'] })
 // 8 PROHIBITED ATTRIBUTE SIMILAR
 export default function Page() {
   return (
-    <body className={inter.className}> 
+    <div className={inter.className}> 
       <button aria-lab="fdasdasdasalse"> BUTTON 1</button>
       <button aria-lab="sdadsa" aria-labelledby='dsadas'> BUTTON 2</button>
       <button aria-lab="sdadsa" aria-labi='dsadas'> BUTTON 3 </button>
@@ -24,6 +24,6 @@ export default function Page() {
         <input type="range" aria-val={0} aria-valu={100} />
       </div>
       <p aria-la="false">A</p>
-    </body>
+    </div>
   );
 } 

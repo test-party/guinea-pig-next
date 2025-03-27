@@ -16,8 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body aria-hidden="false">
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   )

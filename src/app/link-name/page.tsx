@@ -5,8 +5,8 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Page() {
   return (
-    <body className={inter.className}>
+    <div className={inter.className}>
         <a href='https://www.google.com'></a>
-    </body>
+    </div>
   );
 }

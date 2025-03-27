@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    @apply w-full;
+}
+.children-test-container > * {
+    @apply flex flex-wrap flex-col items-start justify-start p-6 bg-white rounded-lg shadow-md w-full h-full flex-grow;
+    overflow-x: hidden;
+}
+
+.children-test-container > div > h2 {
+    @apply text-2xl font-bold ;
+}
+
+.children-test-container > div > p {
+    @apply text-lg my-4;
+}
+
+.test-case-container {
+    @apply flex flex-col items-start justify-start p-6 mb-4 bg-white rounded-lg shadow-md h-full flex-1 border-4 border-black;
+}
+
+.test-case-container > h6 {
+    @apply text-lg font-bold;
+}   

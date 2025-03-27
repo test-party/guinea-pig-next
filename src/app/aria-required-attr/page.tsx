@@ -4,7 +4,7 @@ const inter = Inter({ subsets: ['latin'] })
 //http://localhost:3000/aria-required-attr
 export default function Page() {
   return (
-    <body className={inter.className}> 
+    <div className={inter.className}> 
       <div role="combobox" aria-expanded="true" aria-controls=""></div>
       <div role="combobox" aria-expanded="true"></div>
       <div role="combobox" aria-controls=""></div>
@@ -19,6 +19,6 @@ export default function Page() {
       <div role="radio"></div>
       <div role="scrollbar"></div>
       <div role="slider"></div>
-    </body>
+    </div>
   );
 }   

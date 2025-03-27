@@ -4,7 +4,7 @@ const inter = Inter({ subsets: ["latin"] });
 //http://localhost:3000/aria-prohibited-attr
 export default function Page() {
   return (
-    <body className={inter.className}>
+    <div className={inter.className}>
       <header role="generic" aria-label="header">
       </header>
       <div>
@@ -24,6 +24,6 @@ export default function Page() {
         <img aria-selected="true"></img>
         <img aria-hidden="false"></img>
       </div>
-    </body>
+    </div>
   );
 }
