@@ -1,21 +1,25 @@
 'use client'
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation'
 
 export default function LoginPage() {
   const router = useRouter();
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (username === 'admin' && password === '1234') {
-      router.push('http://localhost:3000/all-tests');
+      router.push('/all-tests');
     } else {
       setError('Invalid credentials.');
     }
   };
+
+
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f3f4f6' }}>
