@@ -24,6 +24,7 @@ export default function LoginPage() {
   return (
     <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f3f4f6' }}>
       <form
+        data-testid={"login-form"}
         onSubmit={handleLogin}
         style={{ backgroundColor: '#fff', padding: '2rem', borderRadius: '1rem', boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)', width: '100%', maxWidth: '400px' }}
       >
@@ -33,12 +34,14 @@ export default function LoginPage() {
           type="text"
           placeholder="Username"
           value={username}
+          id={"email"}
           onChange={(e) => setUsername(e.target.value)}
           style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', borderRadius: '0.5rem', border: '1px solid #ccc' }}
         />
 
         <input
           type="password"
+          id={"password"}
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
