@@ -17,6 +17,7 @@ jobs:
           repository_id: ${{ github.repository_id }}
           urls: |
             [
+              "http://localhost:3000/color-contrast",
               "http://localhost:3000/all-tests",
               "http://localhost:3000"
             ]
