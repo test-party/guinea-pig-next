@@ -23,13 +23,13 @@ export default function Page() {
             <h2>Failing Cases</h2>
 
             {/* Fail: aria-braillelabel without aria-label/aria-labelledby */}
-            <button aria-braillelabel="Save">Save</button>
+            <button aria-braillelabel="Save"></button>
 
             {/* Fail: aria-brailleroledescription without aria-roledescription */}
-            <div role="button" aria-brailleroledescription="btn">Click me</div>
+            <div role="button" aria-brailleroledescription="btn"></div>
 
             {/* Fail: both braille attributes without standard counterparts */}
-            <button aria-braillelabel="Edit" aria-brailleroledescription="btn">Edit</button>
+            <button aria-braillelabel="Edit" aria-brailleroledescription="btn"></button>
         </div>
     );
 }
