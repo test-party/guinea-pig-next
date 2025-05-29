@@ -1,34 +1,36 @@
-// http://localhost:3000/aria-braille-equivalent
+//http://localhost:3000/aria-braille-equivalent
 export default function Page() {
-  return (
-    <div>
-      <h1>Test Page for aria-braille-equivalent Violations</h1>
+    return (
+        <div>
+            <h1>Test Page for aria-braille-equivalent Violations</h1>
 
-      <button aria-braillelabel="Submit form">
-        Submit
-      </button>
+            <button id="pass1" aria-braillelabel="hello">Hello</button>
+            <button id="pass2" aria-braillelabel=""></button>
+            <button id="incomplete1" aria-braillelabel="hello"></button>
 
-      <div role="navigation" aria-brailleroledescription="Site menu">
-        <ul>
-          <li><a href="/home">Home</a></li>
-        </ul>
-      </div>
+            <aside
+                id="pass3"
+                aria-roledescription="table of contents"
+                aria-brailleroledescription=""
+            ></aside>
 
-      <a href="/profile" aria-braillelabel="User profile link" aria-label="Go to your account">
-        Profile
-      </a>
+            <aside
+                id="pass4"
+                aria-roledescription="table of contents"
+                aria-brailleroledescription="table of contents"
+            ></aside>
 
-      <button aria-braillelabel="Close window" aria-label="">
-        Close
-      </button>
+            <aside
+                id="pass5"
+                aria-roledescription=""
+                aria-brailleroledescription=""
+            ></aside>
 
-      <span aria-brailleroledescription="Decorative element">
-        Star icon
-      </span>
-
-      <div aria-braillelabel="Hidden content" hidden>
-        This is hidden
-      </div>
-    </div>
-  );
+            <aside
+                id="incomplete2"
+                aria-roledescription=""
+                aria-brailleroledescription="table of contents"
+            ></aside>
+        </div>
+    );
 }
