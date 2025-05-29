@@ -84,7 +84,7 @@ export default function AllTests() {
 
           {/* Case Sensitivity Issues */}
           <div className="test-case-container">
-          <h6>"Contact Us" has an aria-labelledby matching text but with lowercase letters (case sensitive) 🚫</h6>
+            <h6>"Contact Us" has an aria-labelledby matching text but with lowercase letters (case sensitive) 🚫</h6>
             <div role="link" id="contact-us-link" aria-labelledby="ContactUsHeading"></div>
             {/* Existing IDs in the DOM */}
             <h2 id="contactusheading">Contact Us</h2>
@@ -93,7 +93,7 @@ export default function AllTests() {
 
           {/* Empty aria-labelledby Attribute */}
           <div className="test-case-container">
-          <h6>"Refresh Page" button has aria-labelledby but value is empty 🚫</h6>
+            <h6>"Refresh Page" button has aria-labelledby but value is empty 🚫</h6>
             <div role="button" id="refresh-btn" aria-labelledby=""></div>
             {/* Existing IDs in the DOM */}
             <span id="refresh-text">Refresh Page</span>
@@ -315,6 +315,15 @@ export default function AllTests() {
           <div id="valid">Valid Label</div>
         </div>
       </div>
+      <div id='aria-progressbar-name'>
+        <div role="progressbar" id="empty"></div>
+        <div role="progressbar" id="alempty" aria-label=""></div>
+        <div role="progressbar" id="albmissing" aria-labelledby="nonexistent"></div>
+        <div role="progressbar" id="albempty" aria-labelledby="emptydiv"></div>
+        <div id="emptydiv"></div>
+        <div role="progressbar" id="valid-label-progressbar"></div>
+        <div id="valid">Valid Label</div>
+      </div>
       <div id="aria-required-attr">
         <h2>Aria-required-attr</h2>
         <p>Required ARIA attributes must be provided</p>
@@ -353,7 +362,7 @@ export default function AllTests() {
           <div className="test-case-container">
             <h6>Cell with role \"cell\" needs row on parent option 🚫</h6>
             <div>
-            <div role="cell" className={redDivStyle}>This cell needs row and row&apos;s parent options</div>
+              <div role="cell" className={redDivStyle}>This cell needs row and row&apos;s parent options</div>
             </div>
           </div>
 
@@ -465,8 +474,8 @@ export default function AllTests() {
           <form action="#">
             <label id="submit-here"></label>
             <input type="button" aria-labelledby="submit-here" className={redDivStyle} />
-          </form>  
-          <p>Button without any accessible name</p>        
+          </form>
+          <p>Button without any accessible name</p>
           <form action="#">
             <input type="button" id="first-name" className={redDivStyle} />
           </form>
@@ -743,7 +752,7 @@ export default function AllTests() {
         <p>Images must have alternate text</p>
         <div >
           <div className="test-case-container">
-          <h6>Images without any alternative text 🚫</h6>
+            <h6>Images without any alternative text 🚫</h6>
             <div className="min-h-screen grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 p-6 md:p-24">
               {ids.map((id) => {
                 return <div key={id}><img className="object-fill w-full h-full" key={id} src={`https://picsum.photos/id/${id}/200/300`}></img></div>
