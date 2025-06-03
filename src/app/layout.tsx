@@ -23,11 +23,9 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
         <body aria-hidden="false">
           {children}
         </body>
-      </html>
     </ClerkProvider>
   )
 }
