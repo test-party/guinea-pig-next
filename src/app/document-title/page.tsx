@@ -6,7 +6,6 @@ const Page = () => {
     return (
         <div>
             <div>Document Title Test Page</div>
-            <div>Remediation is in layout file</div>
         </div>
     );
 };   
