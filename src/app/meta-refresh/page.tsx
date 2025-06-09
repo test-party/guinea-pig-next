@@ -8,5 +8,5 @@ export default function Page() {
             <meta http-equiv="content-type" />
             <meta http-equiv="default-style" />
         </div>
-    );
+    )
 }

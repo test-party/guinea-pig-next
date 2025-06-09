@@ -1,14 +1,14 @@
-import { RedirectToSignIn, SignedIn } from "@clerk/nextjs";
-import { auth } from "@clerk/nextjs/server";
+import { RedirectToSignIn, SignedIn } from '@clerk/nextjs'
+import { auth } from '@clerk/nextjs/server'
 
 export default async function SignIn() {
-    const { userId } = await auth();
+    const { userId } = await auth()
     if (!userId) {
         return (
             <div>
                 <RedirectToSignIn redirectUrl="/protected-link-name" />
             </div>
-        );
+        )
     }
     return (
         <div>
@@ -20,5 +20,5 @@ export default async function SignIn() {
                 <a href="/protected-link-name">Go to Protected Page</a>
             </SignedIn>
         </div>
-    );
+    )
 }

@@ -6,5 +6,5 @@ export default function UnorderedList() {
             <p>Wrong</p>
             <li>Item 3</li>
         </ul>
-    );
+    )
 }

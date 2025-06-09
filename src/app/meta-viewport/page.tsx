@@ -7,5 +7,5 @@ export default function Page() {
             <meta name="viewport" content="user-scalable=no, maximum-scale=2.6" />
             <meta name="viewport" content="user-scalable=no, maximum-scale=1" />
         </div>
-    );
+    )
 }

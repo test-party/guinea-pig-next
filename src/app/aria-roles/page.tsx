@@ -12,9 +12,9 @@ const Page = () => {
             <span role="invalid-name">
             </span>
         </>
-    );
-};
+    )
+}
 
-export default Page;
+export default Page
 
 // http://localhost:3000/aria-roles

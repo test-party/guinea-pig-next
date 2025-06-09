@@ -10,9 +10,9 @@ const Page = () => {
             <div role="tooltip" id="albempty" aria-labelledby="emptydiv"></div>
             <div id="emptydiv"></div>
         </div>
-    );
-};
+    )
+}
 
-export default Page;
+export default Page
 
 // http://localhost:3000/aria-tooltip-name

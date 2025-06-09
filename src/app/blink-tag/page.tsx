@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 // Adding the blink tag to the JSX.IntrinsicElements interface
 declare global {
@@ -21,7 +21,7 @@ const Page = () => {
             </div>
             <blink>This is a blinking text with a <blink>blinking text</blink> inside it.</blink>
         </div>
-    );
-};   
+    )
+}
 
-export default Page;
+export default Page

@@ -22,9 +22,9 @@ const Page = () => {
                 <span></span>
                 <span></span>
             </div>
-        </div>);
-};
+        </div>)
+}
 
-export default Page;
+export default Page
 
 // http://localhost:3000/aria-toggle
