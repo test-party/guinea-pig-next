@@ -518,7 +518,7 @@ export default function AllTests() {
                     <p>This text is working well , no remediations needed </p>
                 </div>
                 <div className="test-case-container">
-                    <h6>{'Abbreviations (abbreviations should be wrapped in an <abbr> tag with his meaning on title attribute)🚫'}</h6>
+                    <h6>{'Abbreviations (abbreviations should be wrapped in an <abbr> tag with its meaning on title attribute)🚫'}</h6>
                     <p>The FBI is an american agency</p>
                     <p>The FMI is an american agency</p>
                     <p>This text is working well , no remediations needed </p>
