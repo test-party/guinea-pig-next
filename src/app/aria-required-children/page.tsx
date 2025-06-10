@@ -15,8 +15,8 @@ const Page = () => {
                 </div>
             </nav>
         </div>
-    );
-};
+    )
+}
 
-export default Page;
+export default Page
 //http://localhost:3000/aria-required-children

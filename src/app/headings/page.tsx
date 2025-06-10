@@ -33,9 +33,9 @@ export default function Headings() {
                     </div>
                 </div>
             </div>
-            
+
             <h2>Heading 2...</h2>
             <p>This is a paragraph.....</p>
         </div>
-    );
+    )
 }
