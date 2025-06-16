@@ -13,6 +13,7 @@ const redButton = 'bg-red-500 text-white  p-2 rounded max-w-xs w-full min-h-[48p
 
 const linkList = [
     'aria-command-name',
+    'aria-conditional-attr',
     'aria-deprecated-role',
     'aria-meter-name',
     'aria-required-attr',
@@ -279,6 +280,48 @@ export default function AllTests() {
                                 </div>
                             </div>
                         </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="aria-conditional-attr">
+                <h2>Aria-conditional-attr</h2>
+                <p>ARIA conditional attributes must be used appropriately based on element context</p>
+                <div className="test-case-container">
+                    <h6>ARIA conditional attributes used incorrectly 🚫</h6>
+                    
+                    {/* Violation: aria-checked on native checkbox */}
+                    <div className="mb-4">
+                        <input type="checkbox" aria-checked="true" />
+                        <label className="ml-2">Checkbox with aria-checked (violation)</label>
+                    </div>
+
+                    {/* Violation: aria-checked on native radio */}
+                    <div className="mb-4">
+                        <input type="radio" aria-checked="true" name="test" />
+                        <label className="ml-2">Radio with aria-checked (violation)</label>
+                    </div>
+
+                    {/* Violation: conditional attributes on table row without treegrid */}
+                    <div className="mb-4">
+                        <table className="border border-gray-300">
+                            <tbody>
+                                <tr aria-posinset={1} aria-setsize={3} className="border-b">
+                                    <td className="p-2">Row with aria-posinset/setsize in table (violation)</td>
+                                </tr>
+                                <tr aria-expanded="false" aria-level={2} className="border-b">
+                                    <td className="p-2">Row with aria-expanded/level in table (violation)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    {/* Violation: conditional attributes on grid row */}
+                    <div className="mb-4">
+                        <div role="grid" className="border border-gray-300">
+                            <div role="row" aria-posinset={2} aria-setsize={5} className="border-b">
+                                <div role="gridcell" className="p-2">Grid row with conditional attrs (violation)</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
