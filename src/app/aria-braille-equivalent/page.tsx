@@ -1,35 +1,34 @@
 //http://localhost:3000/aria-braille-equivalent
-import React from 'react';
-
 export default function Page() {
     return (
         <div>
-            <h1>aria-braille-equivalent Test Cases</h1>
-
-            <h2>Passing Cases</h2>
+            <h1>ARIA Braille Equivalent Test</h1>
 
             {/* Pass: aria-braillelabel with aria-label */}
             <button aria-label="Submit" aria-braillelabel="Sub">Submit</button>
 
-            {/* Pass: aria-braillelabel with aria-labelledby */}
-            <div>
-                <span id="label1">Delete</span>
-                <button aria-labelledby="label1" aria-braillelabel="Del">Delete</button>
-            </div>
+            {/* Pass: aria-braillelabel with accessible name from content */}
+            <button aria-braillelabel="****">
+                <img alt="4 stars" src="/next.svg" />
+            </button>
 
             {/* Pass: aria-brailleroledescription with aria-roledescription */}
-            <div role="button" aria-roledescription="toggle switch" aria-brailleroledescription="switch">Toggle</div>
+            <div role="article" 
+                 aria-labelledby="slideheading"
+                 aria-roledescription="slide"
+                 aria-brailleroledescription="sld">
+                <h2 id="slideheading">My vacation in Rome</h2>
+            </div>
 
-            <h2>Failing Cases</h2>
+            {/* Violation: aria-braillelabel without accessible name */}
+            <img alt="" aria-braillelabel="****" src="/next.svg" />
 
-            {/* Fail: aria-braillelabel without aria-label/aria-labelledby */}
-            <button aria-braillelabel="Save"></button>
-
-            {/* Fail: aria-brailleroledescription without aria-roledescription */}
-            <div role="button" aria-brailleroledescription="btn"></div>
-
-            {/* Fail: both braille attributes without standard counterparts */}
-            <button aria-braillelabel="Edit" aria-brailleroledescription="btn"></button>
+            {/* Violation: aria-brailleroledescription without aria-roledescription */}
+            <div role="article" 
+                 aria-labelledby="slideheading2"
+                 aria-brailleroledescription="slide">
+                <h2 id="slideheading2">My vacation in Paris</h2>
+            </div>
         </div>
     );
 }
