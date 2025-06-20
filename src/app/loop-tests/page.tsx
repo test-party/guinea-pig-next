@@ -14,7 +14,7 @@ export default function Page() {
         <p>DISTINCT CASE</p>
         {distinctList.map(item => <a key={item} href={item}></a>)}
         <p>IMPORTED CASE</p>
-        {[1,2,3].map(item => <Imported/>)}
+        {[1,2,3].map(item => <Imported key={item}/>)}
     </div>
   );
 }
