@@ -6,39 +6,6 @@ export default function PAsHeading() {
             
             <section>
                 <h2>Bad Examples (Flagged by axe-core)</h2>
-                
-                <div style={{ marginBottom: '2rem' }}>
-                    <h3>Paragraph styled as heading</h3>
-                    <p style={{ 
-                        fontSize: '24px', 
-                        fontWeight: 'bold', 
-                        margin: '16px 0 8px 0',
-                        color: '#333'
-                    }}>
-                        This paragraph looks like a heading but isn't semantic
-                    </p>
-                    <p>This creates confusion for screen readers and other assistive technologies.</p>
-                </div>
-
-                <div style={{ marginBottom: '2rem' }}>
-                    <h3>Multiple paragraphs styled as different heading levels</h3>
-                    <p style={{ 
-                        fontSize: '28px', 
-                        fontWeight: 'bold', 
-                        margin: '20px 0 10px 0'
-                    }}>
-                        Main Section Title
-                    </p>
-                    <p style={{ 
-                        fontSize: '20px', 
-                        fontWeight: 'bold', 
-                        margin: '16px 0 8px 0'
-                    }}>
-                        Subsection Title
-                    </p>
-                    <p>Content that follows the fake headings.</p>
-                </div>
-
                 <div style={{ marginBottom: '2rem' }}>
                     <h3>Paragraph with heading-like styling and uppercase</h3>
                     <p style={{ 
