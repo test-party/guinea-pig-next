@@ -8,13 +8,11 @@ export default function Page() {
                 <input 
                     type="text" 
                     title="Enter your name"
-                    aria-label="Full name input"
                 />
                 
                 <input 
                     type="email" 
                     title="Email address"
-                    aria-labelledby="email-label"
                 />
                 <span id="email-label">Your email</span>
                 
