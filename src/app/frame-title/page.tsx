@@ -2,8 +2,8 @@
 const Page = () => {
     return (
         <>
-            <iframe title="Passing Frame Title">Frame Title</iframe>
-            <iframe>Frame Title</iframe>
+            <iframe title="Passing Frame Title"><div>Frame Body</div></iframe>
+            <iframe><div>Body of Invalid Frame</div></iframe>
         </>
     )
 }
