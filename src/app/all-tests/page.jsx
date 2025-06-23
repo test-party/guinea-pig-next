@@ -499,6 +499,10 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+            <div id="frame-title">
+                <iframe title="Passing Frame Title"><div>Frame Body</div></iframe>
+                <iframe><div>Body of Invalid Frame</div></iframe>
+            </div>
             <div id="input-button-name">
                 <h2>Input-button-name</h2>
                 <p>Input buttons must have discernible text.</p>
