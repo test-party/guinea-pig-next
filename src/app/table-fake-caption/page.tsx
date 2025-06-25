@@ -3,7 +3,6 @@ export default function Page() {
     return (
         <div>
             <h1>Table Fake Caption Test</h1>
-            
             <h2>✅ Good Example - Proper Caption Element</h2>
             <table>
                 <caption>Employee Information</caption>
@@ -32,7 +31,7 @@ export default function Page() {
             <table>
                 <tbody>
                     <tr>
-                        <td colSpan={3} style={{textAlign: 'center', fontWeight: 'bold'}}>
+                        <td colSpan={3} style={{ textAlign: 'center', fontWeight: 'bold' }}>
                             Employee Information
                         </td>
                     </tr>
@@ -58,7 +57,7 @@ export default function Page() {
             <table>
                 <tbody>
                     <tr>
-                        <th colSpan={3} style={{textAlign: 'center'}}>
+                        <th colSpan={3} style={{ textAlign: 'center' }}>
                             Product Inventory
                         </th>
                     </tr>

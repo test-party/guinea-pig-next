@@ -288,7 +288,7 @@ export default function AllTests() {
                 <p>ARIA conditional attributes must be used appropriately based on element context</p>
                 <div className="test-case-container">
                     <h6>ARIA conditional attributes used incorrectly 🚫</h6>
-                    
+
                     {/* Violation: aria-checked on native checkbox */}
                     <div className="mb-4">
                         <input type="checkbox" aria-checked="true" />
