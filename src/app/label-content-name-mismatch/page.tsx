@@ -6,10 +6,8 @@ const Page = () => {
     return (
         <div>
             <h1>Label Content Name Mismatch Examples</h1>
-            
             <section>
                 <h2>❌ Bad Examples - Will trigger axe-core violations</h2>
-                
                 <div style={{ marginBottom: '20px' }}>
                     <h3>Button with mismatched label and content</h3>
                     <button aria-label="Save document">Submit</button>
@@ -32,7 +30,6 @@ const Page = () => {
 
             <section>
                 <h2>✅ Good Examples - Will pass axe-core validation</h2>
-                
                 <div style={{ marginBottom: '20px' }}>
                     <h3>Button with matching label and content</h3>
                     <button aria-label="Save document">Save document</button>
