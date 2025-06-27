@@ -14,7 +14,7 @@ export default function Page() {
       <p>This page contains a <code>&lt;marquee&gt;</code> element, which is deprecated.</p>
 
       {/* ❌ Accessibility Error: Deprecated <marquee> tag */}
-      <marquee behavior="scroll" direction="left">
+      <marquee>
         This is a scrolling message using a deprecated tag.
       </marquee>
 
