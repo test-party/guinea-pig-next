@@ -10,7 +10,6 @@ export default function Page() {
                 <p aria-checked="true">ABC</p>
                 <p aria-checked="true">ABC</p>
 
-
             </div>
 
             <div>
@@ -22,5 +21,5 @@ export default function Page() {
             <input type="text" aria-pressed="true" />
             <input type="text" aria-pressed="true" />
         </div>
-    );
+    )
 }

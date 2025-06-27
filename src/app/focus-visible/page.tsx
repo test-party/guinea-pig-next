@@ -1,9 +1,9 @@
-"use client"
+'use client'
 
 export default function InteractivePage() {
     const handleFocus = (e: any) => {
-        e.target.blur();
-    };
+        e.target.blur()
+    }
     return (
         <div>
             <div className="flex flex-col space-y-4 w-100">

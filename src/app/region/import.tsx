@@ -5,5 +5,5 @@ export default function Import() {
                 <p aria-checked="true">ABC</p>
             </main>
         </div>
-    );
+    )
 }

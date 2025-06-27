@@ -5,13 +5,13 @@ export default function AttributesStressTest() {
         <div>
             <div id="custom-test-attr-case-1" aria-label="oldValue"></div>
             <div id="custom-test-attr-case-2" aria-label="oldValue"></div>
-            <div 
-                id="custom-test-attr-case-3" 
+            <div
+                id="custom-test-attr-case-3"
                 aria-label="oldValue">
-                test    
+                test
             </div>
             <div id="custom-test-attr-case-4" aria-label="oldValue">
-                test    
+                test
             </div>
             <div id="custom-test-attr-case-5" aria-label="oldValue"><div>children</div><div>children</div></div>
             <div id="custom-test-attr-case-6" aria-label="oldValue">

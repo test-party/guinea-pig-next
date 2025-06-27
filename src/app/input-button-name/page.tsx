@@ -10,5 +10,5 @@ export default function Page() {
                 <input type="button" id="first-name"/>
             </form>
         </main>
-    );
+    )
 }

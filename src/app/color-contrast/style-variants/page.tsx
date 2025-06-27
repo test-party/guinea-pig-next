@@ -1,59 +1,59 @@
-import { colorD } from "../../../components/ColorStyles";
+import { colorD } from '../../../components/ColorStyles'
 
 export default function ColorContrast() {
-  const colorA = "text-gray-400";
-  const colorB = "text-gray-400 bg-gray-300";
-  const colorC = "bg-gray-300 text-gray-400";
-  
-  return (
-    <div style={{ padding: "20px" }}>
-      {/* Inline Styles */}
-      <h1 style={{ color: "#ffffff", backgroundColor: "#000000" }}>
+    const colorA = 'text-gray-400'
+    const colorB = 'text-gray-400 bg-gray-300'
+    const colorC = 'bg-gray-300 text-gray-400'
+
+    return (
+        <div style={{ padding: '20px' }}>
+            {/* Inline Styles */}
+            <h1 style={{ color: '#ffffff', backgroundColor: '#000000' }}>
         Inline: Good Contrast (White on Black)
-      </h1>
-      <p style={{ color: "#cccccc", backgroundColor: "#ffffff" }}>
+            </h1>
+            <p style={{ color: '#cccccc', backgroundColor: '#ffffff' }}>
         Inline: Poor Contrast (Light Gray on White)
-      </p>
+            </p>
 
-      {/* Tailwind Styles */}
-      <div className="bg-red-500 text-charcoal">
+            {/* Tailwind Styles */}
+            <div className="bg-red-500 text-charcoal">
         Tailwind: Good Contrast (Charcoal on Red)
-      </div>
-      <div className="bg-gray-300 text-gray-400">
+            </div>
+            <div className="bg-gray-300 text-gray-400">
         Tailwind: Poor Contrast (Gray on Slightly Darker Gray)
-      </div>
-      <div className="bg-gray-300 text-gray-400 flex justify-center h-12">
+            </div>
+            <div className="bg-gray-300 text-gray-400 flex justify-center h-12">
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
-      </div>
-      <div className={`bg-gray-300 ${colorA} flex justify-center h-12`}>
+            </div>
+            <div className={`bg-gray-300 ${colorA} flex justify-center h-12`}>
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
-      </div>
-      <div className={colorB}>
+            </div>
+            <div className={colorB}>
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
-      </div>
-      <div className={`bg-gray-300 ${colorC} flex justify-center h-12`}>
+            </div>
+            <div className={`bg-gray-300 ${colorC} flex justify-center h-12`}>
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
-      </div>
-      <div className={`bg-gray-300 ${colorD} flex justify-center h-12`}>
+            </div>
+            <div className={`bg-gray-300 ${colorD} flex justify-center h-12`}>
         Tailwind: Poor Contrast with additional classes (Gray on Slightly Darker Gray)
-      </div>
+            </div>
 
-      {/* CSS Class-Based Styles */}
-      <div className="black-on-green">
+            {/* CSS Class-Based Styles */}
+            <div className="black-on-green">
         CSS-Class: Good Contrast (Black on Green)
-      </div>
-      <div className="red-on-lightred">
+            </div>
+            <div className="red-on-lightred">
         CSS-Class: Poor Contrast (Bright Red on Light Red)
-      </div>
-      <div className="custom-blue">
+            </div>
+            <div className="custom-blue">
         Custom Blue: Good Contrast (White on Dark Blue)
-      </div>
-      <div className="custom-yellow">
+            </div>
+            <div className="custom-yellow">
         Custom Yellow: Poor Contrast (Bright Yellow on Light Yellow)
-      </div>
+            </div>
 
-      {/* Custom CSS */}
-      <style>{`
+            {/* Custom CSS */}
+            <style>{`
         .red-on-lightred {
           color: #ff3333;
           background-color: #ffe6e6;
@@ -79,6 +79,6 @@ export default function ColorContrast() {
           margin-top: 20px;
         }
       `}</style>
-    </div>
-  );
+        </div>
+    )
 }

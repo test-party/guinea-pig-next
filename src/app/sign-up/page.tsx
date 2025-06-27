@@ -1,4 +1,4 @@
-import { SignUpButton } from "@clerk/nextjs";
+import { SignUpButton } from '@clerk/nextjs'
 
 export default function SignUp() {
     return <SignUpButton />
