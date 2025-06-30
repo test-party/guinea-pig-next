@@ -3,7 +3,6 @@ export default function Page() {
     return (
         <div>
             <h1>TD Headers Attribute Test</h1>
-            
             <h2>✅ Good Example - Valid Headers Attribute</h2>
             <table>
                 <thead>
@@ -26,7 +25,6 @@ export default function Page() {
                     </tr>
                 </tbody>
             </table>
-
             <h2>❌ Bad Example - Self-Reference in Headers</h2>
             <table>
                 <thead>
@@ -42,7 +40,6 @@ export default function Page() {
                     </tr>
                 </tbody>
             </table>
-
             <h2>❌ Bad Example - Headers References Non-existent ID</h2>
             <table>
                 <thead>
@@ -58,7 +55,6 @@ export default function Page() {
                     </tr>
                 </tbody>
             </table>
-
         </div>
     )
 }
