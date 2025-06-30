@@ -5,7 +5,11 @@ import React from 'react'
 const Page = () => {
     return (
 <div>
-  <p>click below to subscribe!</p>
+  <p>
+                click below to subscribe!
+
+                
+            </p>
      <button role="button">
 
         
