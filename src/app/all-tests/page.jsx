@@ -801,6 +801,22 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+             <div id="td-headers-attr">
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="product" scope="col">Product</th>
+                            <th id="price" scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="widget-a" headers="widget-a product">Widget A</td>
+                            <td headers="price">$10.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div id="image-alt">
                 <h2>Image-alt</h2>
                 <p>Images must have alternate text</p>
