@@ -59,37 +59,6 @@ export default function Page() {
                 </tbody>
             </table>
 
-            <h2>❌ Bad Example - Headers References Non-Header Cell</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th id="category" scope="col">Category</th>
-                        <th id="amount" scope="col">Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td id="regular-cell">Electronics</td>
-                        <td headers="regular-cell amount">$100</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h2>❌ Bad Example - Empty Headers Attribute</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th id="type" scope="col">Type</th>
-                        <th id="value" scope="col">Value</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td headers="">Widget C</td>
-                        <td headers="   ">$25.99</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     )
 }
