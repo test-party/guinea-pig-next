@@ -263,12 +263,12 @@ export default function AllTests() {
 
                         <nav aria-label="Mobile Menu">
                             <button aria-haspopup="true" aria-expanded="false" id="mobile-menu-toggle">
-                Menu
+                                Menu
                             </button>
                             <div role="menu" aria-labelledby="mobile-menu-toggle">
                                 {/* Properly labeled menuitem */}
                                 <div role="menuitem" aria-label="Home" id="mobile-home">
-                  Home
+                                    Home
                                 </div>
 
                                 {/* Missing aria-label for Services */}
@@ -276,7 +276,7 @@ export default function AllTests() {
 
                                 {/* Properly labeled menuitem */}
                                 <div role="menuitem" aria-label="Contact Us" id="mobile-contact">
-                  Contact Us
+                                    Contact Us
                                 </div>
                             </div>
                         </nav>
@@ -459,13 +459,13 @@ export default function AllTests() {
                 <p>Elements must meet minimum color contrast ratio thresholds</p>
                 <div className="test-case-container" style={{ padding: '20px' }}>
                     <h1 style={{ color: '#ffffff', backgroundColor: '#000000' }}>
-            Good Contrast: White on Black
+                        Good Contrast: White on Black
                     </h1>
                     <p style={{ color: '#999999', backgroundColor: '#ffffff' }}>
-            Poor Contrast: Light Gray on White
+                        Poor Contrast: Light Gray on White
                     </p>
                     <button style={{ color: '#ffffff', backgroundColor: '#0056B3' }}>
-            Good Contrast: White on Blue Button
+                        Good Contrast: White on Blue Button
                     </button>
                     <div
                         style={{
@@ -475,7 +475,7 @@ export default function AllTests() {
                             marginTop: '20px',
                         }}
                     >
-            Poor Contrast: Red on Light Red
+                        Poor Contrast: Red on Light Red
                     </div>
                     <div
                         style={{
@@ -485,7 +485,7 @@ export default function AllTests() {
                             marginTop: '20px',
                         }}
                     >
-            Good Contrast: Black on Green
+                        Good Contrast: Black on Green
                     </div>
                     <div
                         style={{
@@ -495,7 +495,7 @@ export default function AllTests() {
                             marginTop: '20px',
                         }}
                     >
-            Good Contrast: Black on Yellow
+                        Good Contrast: Black on Yellow
                     </div>
                 </div>
             </div>
@@ -586,7 +586,7 @@ export default function AllTests() {
                     <div role="img" aria-label="Valid Label" id="pass1"></div>
                     <div id="match">Bananas</div>
                     <div role="img" aria-labelledby="match" id="pass2"></div>
-                    <div id="hidden-match" style={{ display:'none' }}>Banana bombs</div>
+                    <div id="hidden-match" style={{ display: 'none' }}>Banana bombs</div>
                     <div role="img" aria-labelledby="hidden-match" id="pass3"></div>
                     <div role="img" title="title" id="pass4"></div>
                 </div>
@@ -801,6 +801,22 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+            <div id="td-headers-attr">
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="product" scope="col">Product</th>
+                            <th id="price" scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="widget-a" headers="widget-a product">Widget A</td>
+                            <td headers="price">$10.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div id="image-alt">
                 <h2>Image-alt</h2>
                 <p>Images must have alternate text</p>
@@ -847,20 +863,20 @@ export default function AllTests() {
                     <div className="test-case-container">
                         <h6>Aria-roles without valid values by tag 🚫</h6>
                         <div role="buttonish" className={redDivStyle}>
-              Invalid role: "buttonish"
+                            Invalid role: "buttonish"
                         </div>
                         <div role="headingg" aria-level="2" className={redDivStyle}>
-              Invalid role: "headingg"
+                            Invalid role: "headingg"
                         </div>
                         <div role="select" className={redDivStyle}>
-              Invalid role: "select" (abstract role)
+                            Invalid role: "select" (abstract role)
                         </div>
                         <span role="superstar" className={redDivStyle}>
-              Invalid role: "superstar"
+                            Invalid role: "superstar"
                         </span>
 
                         <p role="navigation" className={redDivStyle}>
-              Paragraph with role "navigation" — not valid for this tag
+                            Paragraph with role "navigation" — not valid for this tag
                         </p>
                     </div>
                 </div>
