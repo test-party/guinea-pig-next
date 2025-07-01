@@ -817,6 +817,17 @@ export default function AllTests() {
                     </tbody>
                 </table>
             </div>
+            <div id="definition-list">
+                <dl>
+                    <dt>Pet</dt>
+                    <dd>Dog</dd>
+                    <div>
+                        <dd>Animal</dd>
+                        <dt>Lion</dt>
+                    </div>
+                    <button>I am a button</button>
+                </dl>
+            </div>
             <div id="image-alt">
                 <h2>Image-alt</h2>
                 <p>Images must have alternate text</p>
