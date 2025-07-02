@@ -36,12 +36,12 @@ export default function Page() {
                 <dl>
                     <dt>Pet</dt>
                     <dd>Dog</dd>
-                    <span>I am span text</span>
+                    <button>I am a button</button>
                     <div>
                         <dd>Animal</dd>
                         <dt>Lion</dt>
                     </div>
-                    <button>I am a button</button>
+                    <button>I am also a button</button>
                 </dl>
             </div>
         </div>
