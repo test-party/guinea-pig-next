@@ -1,8 +1,5 @@
-'use client'
-import React from 'react'
-
 //http://localhost:3000/dlitem
-const Page = () => {
+export default function Page() {
     return (
         <div>
             <h2>Valid</h2>
@@ -41,5 +38,3 @@ const Page = () => {
         </div>
     )
 }
-
-export default Page
