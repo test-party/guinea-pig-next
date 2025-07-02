@@ -23,10 +23,10 @@ export default function RootLayout({
 }) {
     return (
         <ClerkProvider>
-            <html lang="en">
-                <body aria-hidden="false">
+            <html lang="en"><title>Car and Truck Models Overview | Vehicle Information Page</title>
+                <body aria-hidden="false"><main>
                     {children}
-                </body>
+                </main></body>
             </html>
         </ClerkProvider>
     )
