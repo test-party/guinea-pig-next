@@ -32,6 +32,17 @@ export default function Page() {
                     </div>
                     <button>I am a button</button>
                 </dl>
+                <div>Case 3: multiple elements inside 'dl' that are not 'dd' or 'dt'</div>
+                <dl>
+                    <dt>Pet</dt>
+                    <dd>Dog</dd>
+                    <span>I am span text</span>
+                    <div>
+                        <dd>Animal</dd>
+                        <dt>Lion</dt>
+                    </div>
+                    <button>I am a button</button>
+                </dl>
             </div>
         </div>
     )
