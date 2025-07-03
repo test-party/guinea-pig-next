@@ -15,6 +15,7 @@ const linkList = [
     'aria-command-name',
     'aria-conditional-attr',
     'aria-deprecated-role',
+    'aria-hidden-focus',
     'aria-meter-name',
     'aria-required-attr',
     'aria-required-parent',
@@ -333,6 +334,43 @@ export default function AllTests() {
                     <div role="directory">
                         <p>Page content example</p>
                     </div>
+                </div>
+            </div>
+            <div id="aria-hidden-focus">
+                <h2>Aria-hidden-focus</h2>
+                <p>Elements with aria-hidden="true" must not be focusable</p>
+                <div className="test-case-container">
+                    <div aria-hidden="true">
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link</a>
+                    </div>
+                    
+                    <div aria-hidden="true">
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link1</a>
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link2</a>
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link3</a>
+                    </div>
+
+                    <div aria-hidden="true">
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>focusable-not-tabbable</a>
+                        <input aria-disabled="true" aria-label="focusable-disabled input" />
+                    </div>
+
+                    <div aria-hidden="true">
+                        <input aria-disabled="true" aria-label="Failing Input Field" />
+                    </div>
+
+                    <div aria-hidden="true">
+                        <div aria-hidden="false">
+                            <button>Some button</button>
+                        </div>
+                    </div>
+
+                    <p tabIndex={0} aria-hidden="true">Some text</p>
+
+                    <details aria-hidden="true">
+                        <summary>Some button</summary>
+                        <p>Some details</p>
+                    </details>
                 </div>
             </div>
             <div id="aria-meter-name">
