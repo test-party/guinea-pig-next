@@ -30,6 +30,7 @@ const linkList = [
     'neurodiversity ruleset',
     'scrollable-region-focusable',
     'select-name',
+    'summary-name',
     'svg-img-alt',
     'image-alt',
     'aria-roles',
@@ -657,6 +658,79 @@ export default function AllTests() {
                         <option value="mercedes">Mercedes</option>
                         <option value="bmw">BMW</option>
                     </select>
+                </div>
+            </div>
+            <div id="summary-name">
+                <h2>Summary-name</h2>
+                <p>Summary elements must have an accessible name</p>
+                <div className="test-case-container">
+                    {/* Empty summary */}
+                    <h3>Specifications</h3>
+                    <p>This section contains detailed product specifications.</p>
+                    <details>
+                        <summary></summary>
+                        <ul>
+                            <li>Dimensions: 10x10 inches</li>
+                            <li>Weight: 2 lbs</li>
+                        </ul>
+                    </details>
+
+                    {/* aria-labelledby points to missing ID */}
+                    <p id="id-not-connecting-to-summary">Payment Instructions</p>
+                    <details>
+                        <summary aria-labelledby="label-for-payment-instructions"></summary>
+                        <p>Please follow the payment instructions carefully.</p>
+                    </details>
+
+                    {/* aria-labelledby points to empty element */}
+                    <h3>Returns and Exchanges</h3>
+                    <p id="empty-label"></p>
+                    <details>
+                        <summary aria-labelledby="empty-label"></summary>
+                        <p>Our return policy allows exchanges within 30 days.</p>
+                    </details>
+
+                    {/* Only whitespace */}
+                    <h3>Care Instructions</h3>
+                    <p>Learn how to care for your product below.</p>
+                    <details>
+                        <summary>   </summary>
+                        <ul>
+                            <li>Machine wash cold</li>
+                            <li>Do not bleach</li>
+                        </ul>
+                    </details>
+
+                    {/* Icon only */}
+                    <h3>More Information</h3>
+                    <p>Additional resources about this product.</p>
+                    <details>
+                        <summary>
+                            <svg width="16" height="16" aria-hidden="true">
+                                <path d="M2 2 L14 8 L2 14 Z" />
+                            </svg>
+                        </summary>
+                        <p>Here are more details about product usage.</p>
+                    </details>
+
+                    {/* aria-label set to empty string */}
+                    <h3>Delivery Options</h3>
+                    <p>Review available delivery methods below.</p>
+                    <details>
+                        <summary aria-label=""></summary>
+                        <ul>
+                            <li>Standard Shipping</li>
+                            <li>Next-Day Delivery</li>
+                        </ul>
+                    </details>
+
+                    {/* aria-labelledby set to empty string */}
+                    <h3>Returns and Exchanges</h3>
+                    <p id="empty-label"></p>
+                    <details>
+                        <summary aria-labelledby=""></summary>
+                        <p>Our return policy allows exchanges within 30 days.</p>
+                    </details>
                 </div>
             </div>
             <div id="svg-img-alt">
