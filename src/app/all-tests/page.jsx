@@ -499,6 +499,13 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+            <div id="dlitem">
+                <div>
+                    <dt>Type</dt>
+                    <dd>Definition</dd>
+                    <dt>Lonely Type</dt>
+                </div>
+            </div>
             <div id="frame-title">
                 <iframe title="Passing Frame Title"><div>Frame Body</div></iframe>
                 <iframe><div>Body of Invalid Frame</div></iframe>
@@ -801,7 +808,7 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
-             <div id="td-headers-attr">
+            <div id="td-headers-attr">
                 <table>
                     <thead>
                         <tr>
