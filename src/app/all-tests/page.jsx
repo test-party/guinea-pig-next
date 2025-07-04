@@ -15,6 +15,7 @@ const linkList = [
     'aria-command-name',
     'aria-conditional-attr',
     'aria-deprecated-role',
+    'aria-hidden-focus',
     'aria-meter-name',
     'aria-required-attr',
     'aria-required-parent',
@@ -30,6 +31,7 @@ const linkList = [
     'neurodiversity ruleset',
     'scrollable-region-focusable',
     'select-name',
+    'summary-name',
     'svg-img-alt',
     'image-alt',
     'aria-roles',
@@ -335,6 +337,43 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+            <div id="aria-hidden-focus">
+                <h2>Aria-hidden-focus</h2>
+                <p>Elements with aria-hidden="true" must not be focusable</p>
+                <div className="test-case-container">
+                    <div aria-hidden="true">
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link</a>
+                    </div>
+                    
+                    <div aria-hidden="true">
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link1</a>
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link2</a>
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>Link3</a>
+                    </div>
+
+                    <div aria-hidden="true">
+                        <a href="/" style={{ position:'absolute', top:'-999em' }}>focusable-not-tabbable</a>
+                        <input aria-disabled="true" aria-label="focusable-disabled input" />
+                    </div>
+
+                    <div aria-hidden="true">
+                        <input aria-disabled="true" aria-label="Failing Input Field" />
+                    </div>
+
+                    <div aria-hidden="true">
+                        <div aria-hidden="false">
+                            <button>Some button</button>
+                        </div>
+                    </div>
+
+                    <p tabIndex={0} aria-hidden="true">Some text</p>
+
+                    <details aria-hidden="true">
+                        <summary>Some button</summary>
+                        <p>Some details</p>
+                    </details>
+                </div>
+            </div>
             <div id="aria-meter-name">
                 <h2>Aria-meter-name</h2>
                 <p>Aria meter nodes must have an accessible name.</p>
@@ -499,6 +538,13 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+            <div id="dlitem">
+                <div>
+                    <dt>Type</dt>
+                    <dd>Definition</dd>
+                    <dt>Lonely Type</dt>
+                </div>
+            </div>
             <div id="frame-title">
                 <iframe title="Passing Frame Title"><div>Frame Body</div></iframe>
                 <iframe><div>Body of Invalid Frame</div></iframe>
@@ -652,6 +698,79 @@ export default function AllTests() {
                     </select>
                 </div>
             </div>
+            <div id="summary-name">
+                <h2>Summary-name</h2>
+                <p>Summary elements must have an accessible name</p>
+                <div className="test-case-container">
+                    {/* Empty summary */}
+                    <h3>Specifications</h3>
+                    <p>This section contains detailed product specifications.</p>
+                    <details>
+                        <summary></summary>
+                        <ul>
+                            <li>Dimensions: 10x10 inches</li>
+                            <li>Weight: 2 lbs</li>
+                        </ul>
+                    </details>
+
+                    {/* aria-labelledby points to missing ID */}
+                    <p id="id-not-connecting-to-summary">Payment Instructions</p>
+                    <details>
+                        <summary aria-labelledby="label-for-payment-instructions"></summary>
+                        <p>Please follow the payment instructions carefully.</p>
+                    </details>
+
+                    {/* aria-labelledby points to empty element */}
+                    <h3>Returns and Exchanges</h3>
+                    <p id="empty-label"></p>
+                    <details>
+                        <summary aria-labelledby="empty-label"></summary>
+                        <p>Our return policy allows exchanges within 30 days.</p>
+                    </details>
+
+                    {/* Only whitespace */}
+                    <h3>Care Instructions</h3>
+                    <p>Learn how to care for your product below.</p>
+                    <details>
+                        <summary>   </summary>
+                        <ul>
+                            <li>Machine wash cold</li>
+                            <li>Do not bleach</li>
+                        </ul>
+                    </details>
+
+                    {/* Icon only */}
+                    <h3>More Information</h3>
+                    <p>Additional resources about this product.</p>
+                    <details>
+                        <summary>
+                            <svg width="16" height="16" aria-hidden="true">
+                                <path d="M2 2 L14 8 L2 14 Z" />
+                            </svg>
+                        </summary>
+                        <p>Here are more details about product usage.</p>
+                    </details>
+
+                    {/* aria-label set to empty string */}
+                    <h3>Delivery Options</h3>
+                    <p>Review available delivery methods below.</p>
+                    <details>
+                        <summary aria-label=""></summary>
+                        <ul>
+                            <li>Standard Shipping</li>
+                            <li>Next-Day Delivery</li>
+                        </ul>
+                    </details>
+
+                    {/* aria-labelledby set to empty string */}
+                    <h3>Returns and Exchanges</h3>
+                    <p id="empty-label"></p>
+                    <details>
+                        <summary aria-labelledby=""></summary>
+                        <p>Our return policy allows exchanges within 30 days.</p>
+                    </details>
+                </div>
+            </div>
             <div id="svg-img-alt">
                 <h2>Svg-img-alt</h2>
                 <p>SVG images and graphics require accessible text</p>
@@ -800,6 +919,33 @@ export default function AllTests() {
                         </svg>
                     </div>
                 </div>
+            </div>
+            <div id="td-headers-attr">
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="product" scope="col">Product</th>
+                            <th id="price" scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="widget-a" headers="widget-a product">Widget A</td>
+                            <td headers="price">$10.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="definition-list">
+                <dl>
+                    <dt>Pet</dt>
+                    <dd>Dog</dd>
+                    <div>
+                        <dd>Animal</dd>
+                        <dt>Lion</dt>
+                    </div>
+                    <button>I am a button</button>
+                </dl>
             </div>
             <div id="image-alt">
                 <h2>Image-alt</h2>
