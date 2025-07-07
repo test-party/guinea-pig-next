@@ -1,3 +1,6 @@
+'use client'
+import React from 'react'
+
 //http://localhost:3000/button-name
 const Page = () => {
     return (
@@ -7,3 +10,5 @@ const Page = () => {
         </div>
     )
 }
+
+export default Page
