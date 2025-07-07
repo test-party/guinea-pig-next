@@ -22,6 +22,13 @@ export default function Page() {
                 height="200"
                 style={{ border: '1px solid black', marginTop: 20 }}
             />
+            <iframe
+                srcDoc={reportHtml}
+                title="Embedded Report"
+                width="400"
+                height="200"
+                style={{ border: '1px solid black', marginTop: 20 }}
+            />
         </div>
     );
 }
