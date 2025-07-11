@@ -36,6 +36,7 @@ const linkList = [
     'image-alt',
     'aria-roles',
     'aria-tooltip-name',
+    'aria-input-field-name',
 ]
 
 export default function AllTests() {
@@ -1020,6 +1021,18 @@ export default function AllTests() {
                         <div role="tooltip" className={redDivStyle}>
                         </div>
                         <div role="tooltip" aria-labelledby="missing-label" className={redDivStyle}>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="aria-input-field-name">
+                <h2>Aria-input-field-name</h2>
+                <p>ARIA input fields must have an accessible name</p>
+                <div >
+                    <div className="test-case-container">
+                        <h6>Input role without an acecessible name 🚫</h6>
+                        <div>
+                            <div id="fail2" aria-labelledby="non-existing" role="combobox">Wrong input field</div>
                         </div>
                     </div>
                 </div>
