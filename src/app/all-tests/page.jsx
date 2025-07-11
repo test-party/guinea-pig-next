@@ -39,7 +39,8 @@ const linkList = [
     'aria-roles',
     'aria-tooltip-name',
     'frame-focusable-content',
-    'aria-treeitem-name'
+    'aria-treeitem-name',
+    'aria-input-field-name',
 ]
 
 export default function AllTests() {
@@ -1065,7 +1066,6 @@ export default function AllTests() {
                     <object data="path/to/content">This object has no alternative text.</object>
                 </div>
             </div>
-
             <div id="frame-focusable-content">
                 <h2>Object-alt</h2>
                 <p>{`<iframe> elements with focusable content must not have tabindex="-1"`}</p>
@@ -1080,6 +1080,18 @@ export default function AllTests() {
                         tabIndex={-1}
                         title="Non-focusable iframe"
                         className="w-full h-24 border"></iframe>
+                </div>
+                <div id="aria-input-field-name">
+                    <h2>Aria-input-field-name</h2>
+                    <p>ARIA input fields must have an accessible name</p>
+                    <div >
+                        <div className="test-case-container">
+                            <h6>Input role without an acecessible name 🚫</h6>
+                            <div>
+                                <div id="fail2" aria-labelledby="non-existing" role="combobox">Wrong input field</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
