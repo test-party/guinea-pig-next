@@ -6,16 +6,8 @@ const Page = () => {
     return (
         <div>
             <p>click below to subscribe!</p>
-            <button 
-            
-            role="button">
-
-
-                
-            </button>
-            <button 
-            
-            role="button"></button>
+            <button role="button"></button>
+            <button role="button"></button>
         </div>
     )
 }
