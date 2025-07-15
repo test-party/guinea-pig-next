@@ -8,6 +8,13 @@ const Page = () => {
             <p>click below to subscribe!</p>
             <button 
             
+            role="button">
+
+
+                
+            </button>
+            <button 
+            
             role="button"></button>
         </div>
     )
