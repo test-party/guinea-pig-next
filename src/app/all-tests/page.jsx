@@ -29,6 +29,7 @@ const linkList = [
     'meta-refresh',
     'meta-viewport',
     'neurodiversity ruleset',
+    'object-alt',
     'scrollable-region-focusable',
     'select-name',
     'summary-name',
