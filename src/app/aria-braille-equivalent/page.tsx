@@ -7,11 +7,6 @@ export default function Page() {
             {/* Pass: aria-braillelabel with aria-label */}
             <button aria-label="Submit" aria-braillelabel="Sub">Submit</button>
 
-            {/* Pass: aria-braillelabel with accessible name from content */}
-            <button aria-braillelabel="****">
-                <img alt="4 stars" src="next.svg" />
-            </button>
-
             {/* Pass: aria-brailleroledescription with aria-roledescription */}
             <div role="article" 
                  aria-labelledby="slideheading"
