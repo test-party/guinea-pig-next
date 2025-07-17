@@ -9,7 +9,7 @@ export default function Page() {
 
             {/* Pass: aria-braillelabel with accessible name from content */}
             <button aria-braillelabel="****">
-                <img alt="4 stars" src="/next.svg" />
+                <img alt="4 stars" src="next.svg" />
             </button>
 
             {/* Pass: aria-brailleroledescription with aria-roledescription */}
@@ -21,7 +21,7 @@ export default function Page() {
             </div>
 
             {/* Violation: aria-braillelabel without accessible name */}
-            <img alt="" aria-braillelabel="****" src="/next.svg" />
+            <img alt="" aria-braillelabel="****" src="next.svg" />
 
             {/* Violation: aria-brailleroledescription without aria-roledescription */}
             <div role="article" 
