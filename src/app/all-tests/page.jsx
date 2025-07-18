@@ -374,6 +374,13 @@ export default function AllTests() {
                     </details>
                 </div>
             </div>
+            <div>
+                <div role="article" 
+                    aria-labelledby="slideheading2"
+                    aria-brailleroledescription="slide">
+                    <h2 id="slideheading2">My vacation in Paris</h2>
+                </div>
+            </div>
             <div id="aria-meter-name">
                 <h2>Aria-meter-name</h2>
                 <p>Aria meter nodes must have an accessible name.</p>
