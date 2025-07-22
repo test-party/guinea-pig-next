@@ -3,7 +3,7 @@ export default function Page() {
     return (
         <div>
             <button aria-label="Submit" aria-braillelabel="Sub">Submit</button>
-            <img alt="" aria-braillelabel="****" src="next.svg" />
+            <img alt="some alt text description" aria-braillelabel="****" src="next.svg" />
             <div role="article" 
                  aria-labelledby="slideheading"
                  aria-roledescription="slide"
