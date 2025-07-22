@@ -6,7 +6,7 @@ export default function Page() {
             <div role="article" 
                  aria-labelledby="slideheading"
                  aria-roledescription="slide"
-                 aria-brailleroledescription="sld">
+                 aria-brailleroledescription="slide">
                 <h2 id="slideheading">My vacation in Rome</h2>
             </div>
             <img alt="" aria-braillelabel="****" src="next.svg" />
