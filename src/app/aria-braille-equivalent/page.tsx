@@ -3,12 +3,14 @@ export default function Page() {
     return (
         <div>
             <button aria-label="Submit" aria-braillelabel="Sub">Submit</button>
+            <img alt="" aria-braillelabel="****" src="next.svg" />
             <div role="article" 
                  aria-labelledby="slideheading"
                  aria-roledescription="slide"
                  aria-brailleroledescription="slide">
                 <h2 id="slideheading">My vacation in Rome</h2>
             </div>
+
             <img alt="" aria-braillelabel="****" src="next.svg" />
             <div role="article" 
                  aria-labelledby="slideheading2"
