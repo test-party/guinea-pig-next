@@ -29,6 +29,7 @@ const linkList = [
     'meta-refresh',
     'meta-viewport',
     'neurodiversity ruleset',
+    'object-alt',
     'scrollable-region-focusable',
     'select-name',
     'summary-name',
@@ -1022,6 +1023,25 @@ export default function AllTests() {
                         <div role="tooltip" aria-labelledby="missing-label" className={redDivStyle}>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="object-alt">
+                <h2>Object-alt</h2>
+                <p>{`<object> elements must have alternative text`}</p>
+                <div className="test-case-container">
+                    <h3>Pass Cases:</h3>
+                    <object data="path/to/content" title="This object has text"></object>
+                    <object data="path/to/content" aria-label="this object has text"></object>
+                    <span id="label1">this object has text</span>
+                    <object data="path/to/content" aria-labelledby="label1"></object>
+                    <object data="path/to/content" role="presentation"></object>
+                    <object data="path/to/content" role="none"></object>
+                    
+                    <h3>Fail Cases:</h3>
+                    <object data="path/to/content"></object>
+                    <object data="path/to/content"><div> </div></object>
+                    <object data="path/to/content">This object has no alternative text.</object>
                 </div>
             </div>
         </div>
