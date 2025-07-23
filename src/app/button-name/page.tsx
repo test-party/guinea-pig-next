@@ -3,6 +3,9 @@ import React from 'react'
 
 //http://localhost:3000/button-name
 const Page = () => {
+    const goToNextPage = () => {
+        
+    }
     return (
         <div>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
@@ -10,7 +13,7 @@ const Page = () => {
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
-            <button onClick={() => {}}></button>
+            <button onClick={() => goToNextPage()}></button>
         </div>
     )
 }
