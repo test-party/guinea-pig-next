@@ -5,9 +5,12 @@ import React from 'react'
 const Page = () => {
     return (
         <div>
-            <p>click below to subscribe!</p>
-            <button role="button"></button>
-            <button role="button"></button>
+            <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
+            <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
+            <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
+            <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
+            <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
+            <button onClick={() => {}}></button>
         </div>
     )
 }
