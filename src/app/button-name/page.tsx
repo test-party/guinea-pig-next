@@ -8,12 +8,14 @@ const Page = () => {
     }
     return (
         <div>
+            {/* <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
             <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
-            <p>dyslexia,dyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexiadyslexia</p>
-            <button onClick={() => goToNextPage()}></button>
+            <button onClick={() => goToNextPage()}></button> */}
+            <p>Click below to subscribe</p>
+            <button id="subscribe-button"></button>
         </div>
     )
 }
