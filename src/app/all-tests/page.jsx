@@ -377,7 +377,7 @@ export default function AllTests() {
             </div>
             <div id="aria-braille-equivalent">
                 <img alt="" aria-braillelabel="a bright blue sky" src="next.svg" />
-                <div role="article" 
+                <div role="article"
                     aria-labelledby="slideheading2"
                     aria-brailleroledescription="slide">
                     <h2 id="slideheading2">My vacation in Paris</h2>
