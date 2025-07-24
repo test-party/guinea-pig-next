@@ -12,6 +12,7 @@ const blueButton = 'bg-blue-500 text-white border border-black p-2 rounded max-w
 const redButton = 'bg-red-500 text-white  p-2 rounded max-w-xs w-full min-h-[48px]'
 
 const linkList = [
+    'aria-braille-equivalent',
     'aria-command-name',
     'aria-conditional-attr',
     'aria-deprecated-role',
@@ -373,6 +374,14 @@ export default function AllTests() {
                         <summary>Some button</summary>
                         <p>Some details</p>
                     </details>
+                </div>
+            </div>
+            <div id="aria-braille-equivalent">
+                <img alt="" aria-braillelabel="a bright blue sky" src="next.svg" />
+                <div role="article"
+                    aria-labelledby="slideheading2"
+                    aria-brailleroledescription="slide">
+                    <h2 id="slideheading2">My vacation in Paris</h2>
                 </div>
             </div>
             <div id="aria-meter-name">
