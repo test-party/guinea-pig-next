@@ -38,6 +38,7 @@ const linkList = [
     'image-alt',
     'aria-roles',
     'aria-tooltip-name',
+    'frame-focusable-content',
 ]
 
 export default function AllTests() {
@@ -1051,6 +1052,23 @@ export default function AllTests() {
                     <object data="path/to/content"></object>
                     <object data="path/to/content"><div> </div></object>
                     <object data="path/to/content">This object has no alternative text.</object>
+                </div>
+            </div>
+
+            <div id="frame-focusable-content">
+                <h2>Object-alt</h2>
+                <p>{`<iframe> elements with focusable content must not have tabindex="-1"`}</p>
+                <div className="test-case-container">
+                    <iframe
+                        srcDoc='<button>Click me</button>'
+                        tabIndex={0}
+                        title="Focusable iframe"
+                        className="mb-4 w-full h-24 border"></iframe>
+                    <iframe
+                        srcDoc='<button>Click me</button>'
+                        tabIndex={-1}
+                        title="Non-focusable iframe"
+                        className="w-full h-24 border"></iframe>
                 </div>
             </div>
         </div>
