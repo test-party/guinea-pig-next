@@ -41,6 +41,7 @@ const linkList = [
     'frame-focusable-content',
     'aria-treeitem-name',
     'aria-input-field-name',
+    'autocomplete-valid',
 ]
 
 export default function AllTests() {
@@ -498,6 +499,15 @@ export default function AllTests() {
                         <button aria-owns={false} className={blueButton}>Click Me</button>
                     </div>
                 </div>
+            </div>
+            <div id="autocomplete-valid">
+                <form>
+                    <input
+                        type="text"
+                        autocomplete={123}
+                        name="email"
+                        aria-label="Select Email Option" />
+                </form>
             </div>
             <div id="blink-tag">
                 <h2>Blink-tag</h2>
