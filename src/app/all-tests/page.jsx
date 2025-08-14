@@ -41,6 +41,8 @@ const linkList = [
     'frame-focusable-content',
     'aria-treeitem-name',
     'aria-input-field-name',
+    'autocomplete-valid',
+    'frame-title-unique',
 ]
 
 export default function AllTests() {
@@ -499,6 +501,15 @@ export default function AllTests() {
                     </div>
                 </div>
             </div>
+            <div id="autocomplete-valid">
+                <form>
+                    <input
+                        type="text"
+                        autocomplete={123}
+                        name="email"
+                        aria-label="Select Email Option" />
+                </form>
+            </div>
             <div id="blink-tag">
                 <h2>Blink-tag</h2>
                 <p>"blink" elements are deprecated and must not be used</p>
@@ -571,6 +582,30 @@ export default function AllTests() {
             <div id="frame-title">
                 <iframe title="Passing Frame Title"><div>Frame Body</div></iframe>
                 <iframe><div>Body of Invalid Frame</div></iframe>
+            </div>
+            <div id="frame-title-unique">
+                <h1>Dashboard</h1>
+                <iframe
+                    srcDoc={reportHtml}
+                    title="Embedded Report"
+                    width="400"
+                    height="200"
+                    style={{ border: '1px solid black', marginTop: 20 }}
+                />
+                <iframe
+                    srcDoc={reportHtml}
+                    title="Embedded Report"
+                    width="400"
+                    height="200"
+                    style={{ border: '1px solid black', marginTop: 20 }}
+                />
+                <iframe
+                    srcDoc={reportHtml}
+                    title="Embedded Report"
+                    width="400"
+                    height="200"
+                    style={{ border: '1px solid black', marginTop: 20 }}
+                />
             </div>
             <div id="input-button-name">
                 <h2>Input-button-name</h2>
