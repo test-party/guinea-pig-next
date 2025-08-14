@@ -39,6 +39,7 @@ const linkList = [
     'aria-roles',
     'aria-tooltip-name',
     'frame-focusable-content',
+    'aria-treeitem-name'
 ]
 
 export default function AllTests() {
@@ -329,6 +330,16 @@ export default function AllTests() {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div id="aria-treeitem-name">
+                <div role="treeitem"></div>
+
+                <div role="treeitem" aria-label=""></div>
+
+                <div role="treeitem" aria-labelledby="nonexistent"></div>
+
+                <div role="treeitem" aria-labelledby="emptydiv"></div>
+                <div id="emptydiv"></div>
             </div>
             <div id="aria-deprecated-role">
                 <h2>Aria-deprecated-role</h2>
