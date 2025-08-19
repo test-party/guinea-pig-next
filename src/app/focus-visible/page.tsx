@@ -2,6 +2,7 @@
 'use client'
 
 
+
 export default function InteractivePage() {
     const handleFocus = (e: any) => {
         e.target.blur()
