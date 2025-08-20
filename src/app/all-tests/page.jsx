@@ -46,6 +46,7 @@ const linkList = [
 ]
 
 export default function AllTests() {
+    const reportHtml = `<html><body><h2>Monthly Report</h2><p>Data goes here.</p></body></html>`;
 
     return (
         <div className="flex flex-col items-center justify-start p-8 space-y-4 !bg-blue-500 container children-test-container ">
