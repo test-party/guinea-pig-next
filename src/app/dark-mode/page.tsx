@@ -13,7 +13,6 @@ export default function DarkModeTestPage() {
         document.documentElement.classList.toggle('dark')
         setIsDark((d) => !d)
     }
-    console.log('Dark mode:', isDark)
 
     return (
         <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 p-8">
