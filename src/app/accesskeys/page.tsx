@@ -5,18 +5,18 @@ export default function Page() {
             <h1>Access Keys Test</h1>
 
             {/* Fixed: Unique accesskey values */}
-            <button accessKey="s">Save</button>
-            <button accessKey="u">Submit</button>
+            <button>Save</button>
+            <button>Submit</button>
 
             {/* Fixed: Non-conflicting accesskeys */}
-            <input type="text" accessKey="t" placeholder="Find text" />
-            <button accessKey="e">Refresh</button>
-            <button accessKey="p">Help</button>
+            <input type="text" placeholder="Find text" />
+            <button>Refresh</button>
+            <button>Help</button>
 
             {/* Fixed: Non-conflicting accesskeys */}
-            <button accessKey="o">Copy</button>
-            <button accessKey="a">Paste</button>
-            <button accessKey="i">Cut</button>
+            <button>Copy</button>
+            <button>Paste</button>
+            <button>Cut</button>
         </div>
     )
 }
