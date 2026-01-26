@@ -26,34 +26,34 @@ export default function Page() {
                 <span>Fail Cases</span>
 
                 <div aria-hidden="true">
-                    <a href="/" style={{ position:'absolute', top:'-999em' }}>Link</a>
+                    <a href="/" style={{ position:'absolute', top:'-999em' }} tabIndex={-1}>Link</a>
                 </div>
 
                 <div aria-hidden="true">
-                    <a href="/" style={{ position:'absolute', top:'-999em' }}>Link1</a>
-                    <a href="/" style={{ position:'absolute', top:'-999em' }}>Link2</a>
-                    <a href="/" style={{ position:'absolute', top:'-999em' }}>Link3</a>
+                    <a href="/" style={{ position:'absolute', top:'-999em' }} tabIndex={-1}>Link1</a>
+                    <a href="/" style={{ position:'absolute', top:'-999em' }} tabIndex={-1}>Link2</a>
+                    <a href="/" style={{ position:'absolute', top:'-999em' }} tabIndex={-1}>Link3</a>
                 </div>
 
                 <div aria-hidden="true">
-                    <a href="/" style={{ position:'absolute', top:'-999em' }}>focusable-not-tabbable</a>
-                    <input aria-disabled="true" aria-label="focusable-disabled input" />
+                    <a href="/" style={{ position:'absolute', top:'-999em' }} tabIndex={-1}>focusable-not-tabbable</a>
+                    <input aria-disabled="true" aria-label="focusable-disabled input" tabIndex={-1} />
                 </div>
 
                 <div aria-hidden="true">
-                    <input aria-disabled="true" aria-label="Failing Input Field" />
+                    <input aria-disabled="true" aria-label="Failing Input Field" tabIndex={-1} />
                 </div>
 
                 <div aria-hidden="true">
                     <div aria-hidden="false">
-                        <button>Some button</button>
+                        <button tabIndex={-1}>Some button</button>
                     </div>
                 </div>
 
-                <p tabIndex={0} aria-hidden="true">Some text</p>
+                <p aria-hidden="true">Some text</p>
 
                 <details aria-hidden="true">
-                    <summary>Some button</summary>
+                    <summary tabIndex={-1}>Some button</summary>
                     <p>Some details</p>
                 </details>
             </div>
