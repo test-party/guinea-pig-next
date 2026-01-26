@@ -2,6 +2,7 @@
 export default function Page() {
     return (
         <div>
+            <div id="non-existing">Country</div>
             <div id="fail2" aria-labelledby="non-existing" role="combobox">England</div>
         </div>
     )
