@@ -4,29 +4,29 @@ export default function Page() {
         <div>
             <h1>ARIA Conditional Attributes Test</h1>
 
-            {/* Violation: aria-checked on native checkbox */}
-            <input type="checkbox" aria-checked="true" />
+            {/* Fixed: removed aria-checked from native checkbox */}
+            <input type="checkbox" />
             <label>Checkbox with aria-checked (violation)</label>
 
-            {/* Violation: aria-checked on native radio */}
-            <input type="radio" aria-checked="true" name="test" />
+            {/* Fixed: removed aria-checked from native radio */}
+            <input type="radio" name="test" />
             <label>Radio with aria-checked (violation)</label>
 
-            {/* Violation: conditional attributes on table row without treegrid */}
+            {/* Fixed: removed conditional attributes from table row */}
             <table>
                 <tbody>
-                    <tr aria-posinset={1} aria-setsize={3}>
+                    <tr>
                         <td>Row with aria-posinset/setsize in table (violation)</td>
                     </tr>
-                    <tr aria-expanded="false" aria-level={2}>
+                    <tr>
                         <td>Row with aria-expanded/level in table (violation)</td>
                     </tr>
                 </tbody>
             </table>
 
-            {/* Violation: conditional attributes on grid row */}
+            {/* Fixed: removed conditional attributes from grid row */}
             <div role="grid">
-                <div role="row" aria-posinset={2} aria-setsize={5}>
+                <div role="row">
                     <div role="gridcell">Grid row with conditional attrs (violation)</div>
                 </div>
             </div>
