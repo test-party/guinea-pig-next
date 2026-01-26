@@ -2,11 +2,11 @@
 export default function Page() {
     return (
         <div>
-            <div role="directory">
+            <div>
                 <p>ABC</p>
             </div>
 
-            <div role="directory">
+            <div>
                 <ul>
                     <li>Item 1</li>
                     <li>Item 2</li>
@@ -14,7 +14,7 @@ export default function Page() {
                 </ul>
             </div>
 
-            <div role="directory">
+            <div>
                 <ul>
                     <li>Parent Item 1
                         <ul>
@@ -31,11 +31,11 @@ export default function Page() {
                 </ul>
             </div>
 
-            <div role="directory" className="randomClassName">
+            <div className="randomClassName">
                 <p>ABC</p>
             </div>
 
-            <div className="randomClassName" style={{ color: 'red' }} role="directory">
+            <div className="randomClassName" style={{ color: 'red' }}>
                 <ul>
                     <li>Item 1</li>
                     <li>Item 2</li>
@@ -43,7 +43,7 @@ export default function Page() {
                 </ul>
             </div>
 
-            <div role="directory" className="randomClassName" style={{ color: 'red' }}>
+            <div className="randomClassName" style={{ color: 'red' }}>
                 <ul>
                     <li>Parent Item 1
                         <ul>
