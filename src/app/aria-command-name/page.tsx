@@ -14,7 +14,7 @@ export default function Page() {
 
             <footer>
                 <h2>Stay Connected</h2>
-                <div role="link" id="empty"></div>
+                <div role="link" id="empty" aria-label="Social media link"></div>
                 <p>Follow us on social media for updates</p>
             </footer>
 
@@ -26,9 +26,9 @@ export default function Page() {
                 <footer>
                     <h2>Share this Article</h2>
                     {/* Missing aria-label for sharing buttons */}
-                    <div role="link" id="share-facebook"></div>
-                    <div role="link" id="share-twitter"></div>
-                    <div role="link" id="share-linkedin"></div>
+                    <div role="link" id="share-facebook" aria-label="Share on Facebook"></div>
+                    <div role="link" id="share-twitter" aria-label="Share on Twitter"></div>
+                    <div role="link" id="share-linkedin" aria-label="Share on LinkedIn"></div>
                 </footer>
 
                 {/* Related Articles section */}
@@ -38,7 +38,7 @@ export default function Page() {
                         <li><a href="#">10 Tips for Better Web Design</a></li>
                         <li><a href="#">Improving Web Accessibility with ARIA</a></li>
                         {/* Missing aria-label for the third related article */}
-                        <li><a href="#" id="related-article"></a></li>
+                        <li><a href="#" id="related-article">Related article</a></li>
                     </ul>
                 </section>
             </article>
@@ -55,7 +55,7 @@ export default function Page() {
                         <input type="text" id="last-name" name="last-name"/>
 
                         {/* Missing aria-label for the Next button */}
-                        <div role="button" id="next-step"></div>
+                        <div role="button" id="next-step" aria-label="Next step"></div>
                     </fieldset>
 
                     <fieldset>
@@ -67,10 +67,10 @@ export default function Page() {
                         <input type="tel" id="phone" name="phone"/>
 
                         {/* Missing aria-label for the Previous button */}
-                        <div role="button" id="prev-step"></div>
+                        <div role="button" id="prev-step" aria-label="Previous step"></div>
 
                         {/* Missing aria-label for the Submit button */}
-                        <div role="button" id="submit-form"></div>
+                        <div role="button" id="submit-form" aria-label="Submit form"></div>
                     </fieldset>
                 </form>
             </section>
@@ -84,7 +84,7 @@ export default function Page() {
                     <label htmlFor="message">Your Message:</label>
                     <textarea id="message" name="message"></textarea>
 
-                    <div role="button" id="alempty" aria-label=""></div>
+                    <div role="button" id="alempty" aria-label="Submit contact form"></div>
                 </form>
             </section>
 
@@ -101,9 +101,9 @@ export default function Page() {
                     <div role="button" aria-label="Previous Page" id="prev-page"></div>
 
                     {/* Missing aria-label for page number buttons */}
-                    <div role="button" id="page-1"></div>
-                    <div role="button" id="page-2"></div>
-                    <div role="button" id="page-3"></div>
+                    <div role="button" id="page-1" aria-label="Page 1"></div>
+                    <div role="button" id="page-2" aria-label="Page 2"></div>
+                    <div role="button" id="page-3" aria-label="Page 3"></div>
 
                     {/* Properly labeled page button */}
                     <div role="button" aria-label="Next Page" id="next-page"></div>
@@ -115,13 +115,13 @@ export default function Page() {
                 <p id="modal-description">Are you sure you want to save changes to your profile?</p>
 
                 {/* Missing aria-label for the Save button */}
-                <div role="button" id="save-changes"></div>
+                <div role="button" id="save-changes" aria-label="Save changes"></div>
 
                 {/* Properly labeled Cancel button */}
                 <div role="button" aria-label="Cancel" id="cancel"></div>
 
                 {/* Missing aria-label for the Close button */}
-                <div role="button" id="close-modal"></div>
+                <div role="button" id="close-modal" aria-label="Close modal"></div>
             </div>
 
             <nav>
@@ -132,10 +132,10 @@ export default function Page() {
                     <li role="menuitem" id="profile" aria-label="Edit Profile">Edit Profile</li>
 
                     {/* Failed example: aria-labelledby references an element that doesn't exist */}
-                    <li role="menuitem" id="albmissing" aria-labelledby="nonexistent">Account Settings</li>
+                    <li role="menuitem" id="albmissing" aria-label="Account Settings">Account Settings</li>
 
                     {/* Failed example: aria-label is missing */}
-                    <li role="menuitem" id="preferences"></li>
+                    <li role="menuitem" id="preferences" aria-label="User preferences"></li>
                 </ul>
             </nav>
 
@@ -150,7 +150,7 @@ export default function Page() {
                     </div>
 
                     {/* Missing aria-label for Services */}
-                    <div role="menuitem" id="mobile-services"></div>
+                    <div role="menuitem" id="mobile-services" aria-label="Services"></div>
 
                     {/* Properly labeled menuitem */}
                     <div role="menuitem" aria-label="Contact Us" id="mobile-contact">
