@@ -5,7 +5,7 @@ export default function Page() {
         <main>
             <input type="image" src="./submit.png" name="submit"
                 height="36" width="113"/>
-                10
+                11
         </main>
     )
 }
