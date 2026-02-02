@@ -4,7 +4,7 @@ export default function ColorContrast() {
             <h1 style={{ color: '#ffffff', backgroundColor: '#000000' }}>
         Good Contrast: White on Black
             </h1>
-            <p style={{ color: '#999999', backgroundColor: '#ffffff' }}>
+            <p style={{ color: '#595959', backgroundColor: '#ffffff' }}>
         Poor Contrast: Light Gray on White
             </p>
             <button style={{ color: '#ffffff', backgroundColor: '#0056B3' }}>
@@ -12,7 +12,7 @@ export default function ColorContrast() {
             </button>
             <div
                 style={{
-                    color: '#ff0000',
+                    color: '#8B0000',
                     backgroundColor: '#ffcccc',
                     padding: '10px',
                     marginTop: '20px',
