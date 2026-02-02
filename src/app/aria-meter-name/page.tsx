@@ -2,12 +2,12 @@
 export default function Page() {
     return (
         <div>
-            <div role="meter" id="empty"></div>
-            <div role="meter" id="alempty" aria-label=""></div>
-            <div role="meter" id="albmissing" aria-labelledby="nonexistent"></div>
-            <div role="meter" id="albempty" aria-labelledby="emptydiv"></div>
-            <div id="emptydiv"></div>
-            <div role="meter" id="valid-label-meter"></div>
+            <div role="meter" id="empty" aria-label="Progress meter"></div>
+            <div role="meter" id="alempty" aria-label="Progress meter"></div>
+            <div role="meter" id="albmissing" aria-label="Progress meter"></div>
+            <div role="meter" id="albempty" aria-label="Progress meter"></div>
+            <div id="emptydiv">Progress meter</div>
+            <div role="meter" id="valid-label-meter" aria-labelledby="valid"></div>
             <div id="valid">Valid Label</div>
         </div>
     )
