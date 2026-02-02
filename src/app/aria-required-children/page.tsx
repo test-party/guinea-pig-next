@@ -2,16 +2,13 @@ const Page = () => {
     return (
         <div>
             <div role="list">
-                <p>LIST ITEM</p>
+                <div role="listitem">LIST ITEM</div>
             </div>
             <nav role="menu">
-
-                <span>option 1</span>
-                <span>option 2</span>
-
+                <div role="menuitem">option 1</div>
+                <div role="menuitem">option 2</div>
                 <div role="menu">
-
-                    <p>Submenu without role="menuitem"</p>
+                    <div role="menuitem">Submenu without role="menuitem"</div>
                 </div>
             </nav>
         </div>
