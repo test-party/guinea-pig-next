@@ -5,8 +5,8 @@ export default function Page() {
         <div>
             <form>
                 <input
-                    type="text"
-                    autocomplete={123}
+                    type="email"
+                    autoComplete="email"
                     name="email"
                     aria-label="Select Email Option" />
             </form>
