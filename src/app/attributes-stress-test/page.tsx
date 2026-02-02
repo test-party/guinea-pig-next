@@ -1,8 +1,8 @@
-
 //http://localhost:3000/attributes-stress-test
 export default function AttributesStressTest() {
     return (
         <div>
+            <h1>Attributes Stress Test</h1>
             <div id="custom-test-attr-case-1" aria-label="oldValue"></div>
             <div id="custom-test-attr-case-2" aria-label="oldValue"></div>
             <div
@@ -27,8 +27,8 @@ export default function AttributesStressTest() {
             <div id="custom-test-attr-case-10" aria-label="oldValue" />
             <div id="custom-test-attr-case-11" aria-label="oldValue" aria-labelledby="oldValue" aria-describedby="oldValue" aria-placeholder="oldValue" />
             <div id="custom-test-attr-case-12" aria-label="oldValue" aria-labelledby="oldValue" />
-            <div id="custom-test-attr-case-13" aria-hidden />
-            <div id="custom-test-attr-case-14" aria-hidden />
+            <div id="custom-test-attr-case-13" aria-hidden="true" />
+            <div id="custom-test-attr-case-14" aria-hidden="true" />
             <div id="custom-test-attr-case-15" />
         </div>
     )
