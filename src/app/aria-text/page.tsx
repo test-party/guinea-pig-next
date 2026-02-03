@@ -2,7 +2,7 @@
 export default function Page() {
     return (
         <div>
-            <span role="text">
+            <span>
                 <a href="/site.html">Not announced as link</a>
             </span>
         </div>
