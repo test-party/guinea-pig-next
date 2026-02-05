@@ -14,16 +14,16 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Page() {
     return (
         <div className={inter.className}>
-            <button aria-lab="fdasdasdasalse"> BUTTON 1</button>
-            <button aria-lab="sdadsa" aria-labelledby="dsadas"> BUTTON 2</button>
-            <button aria-lab="sdadsa" aria-labi="dsadas"> BUTTON 3 </button>
-            <button aria-lae="false"> BUTTON 4 </button>
-            <button aria-lae=""> BUTTON 5 </button>
-            <button aria-dsadasdasdsadas=""> BUTTON 6 </button>
+            <button aria-label="fdasdasdasalse"> BUTTON 1</button>
+            <button aria-label="sdadsa" aria-labelledby="dsadas"> BUTTON 2</button>
+            <button aria-label="sdadsa"> BUTTON 3 </button>
+            <button aria-label="false"> BUTTON 4 </button>
+            <button aria-label="Button 5"> BUTTON 5 </button>
+            <button aria-label="Button 6"> BUTTON 6 </button>
             <div>
-                <input type="range" aria-val={0} aria-valu={100} />
+                <input type="range" aria-valuemin={0} aria-valuemax={100} />
             </div>
-            <p aria-la="false">A</p>
+            <p aria-label="false">A</p>
         </div>
     )
 }
