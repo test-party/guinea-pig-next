@@ -1,15 +1,15 @@
 const Page = () => {
     return (
         <>
-            <div role="invalid-name">
+            <div role="region">
             </div>
-            <ul role="grou">
-                <li role="invalid-name">
+            <ul role="group">
+                <li role="listitem">
                 </li>
             </ul>
-            <div role="invalid-name">
+            <div role="region">
             </div>
-            <span role="invalid-name">
+            <span role="text">
             </span>
         </>
     )
