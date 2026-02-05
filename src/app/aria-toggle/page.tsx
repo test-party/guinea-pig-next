@@ -7,15 +7,15 @@ const Page = () => {
             </ul>
             <p id="pass3Label">Sans-serif</p>
             <ul role="menu">
-                <li id="pass3" role="menuitemradio" aria-checked="true">
+                <li id="pass3a" role="menuitemradio" aria-checked="true">
                 </li>
-                <li id="pass3" role="menuitemradio" aria-checked="true">
+                <li id="pass3b" role="menuitemradio" aria-checked="true">
                 </li>
             </ul>
-            <div role="radiogroup">
-                <div id="pass4" role="radio" aria-checked="false">
+            <div role="radiogroup" aria-labelledby="pass3Label">
+                <div id="pass4a" role="radio" aria-checked="false">
                 </div>
-                <div id="pass4" role="radio" aria-checked="false">
+                <div id="pass4b" role="radio" aria-checked="false">
                 </div>
             </div>
             <div id="fail5" role="switch" aria-checked="true">
