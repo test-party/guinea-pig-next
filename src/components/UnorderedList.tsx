@@ -3,7 +3,7 @@ export default function UnorderedList() {
         <ul>
             <li>Item 1</li>
             <li>Item 2</li>
-            <p>Wrong</p>
+            <li>Wrong</li>
             <li>Item 3</li>
         </ul>
     )
