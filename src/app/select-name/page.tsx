@@ -5,7 +5,7 @@ import React from 'react'
 const Page = () => {
     return (
         <div>
-            <label>Choose a pet:</label>
+            <label htmlFor="pet-select">Choose a pet:</label>
             <select name="pets" id="pet-select">
                 <option value="">--Please choose an option--</option>
                 <option value="dog">Dog</option>
@@ -15,7 +15,8 @@ const Page = () => {
                 <option value="spider">Spider</option>
                 <option value="goldfish">Goldfish</option>
             </select>
-            <select>
+            <label htmlFor="car-select">Choose a car:</label>
+            <select id="car-select">
                 <option value="tesla">Tesla</option>
                 <option value="ford">Ford</option>
                 <option value="chevy">Chevy</option>
