@@ -10,20 +10,20 @@ const Page = () => {
                 <h2>❌ Bad Examples - Will trigger axe-core violations</h2>
                 <div style={{ marginBottom: '20px' }}>
                     <h3>Button with mismatched label and content</h3>
-                    <button aria-label="Save document">Submit</button>
+                    <button aria-label="Submit to save document">Submit</button>
                     <p>The aria-label says "Save document" but the visible text is "Submit"</p>
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>
                     <h3>Link with mismatched label and content</h3>
-                    <a href="#" aria-label="Go to homepage">Contact Us</a>
+                    <a href="#" aria-label="Contact Us - go to homepage">Contact Us</a>
                     <p>The aria-label says "Go to homepage" but the visible text is "Contact Us"</p>
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>
                     <h3>Input with mismatched label</h3>
                     <label htmlFor="email-input">Email Address</label>
-                    <input id="email-input" type="email" aria-label="Username field" />
+                    <input id="email-input" type="email" />
                     <p>The label says "Email Address" but aria-label says "Username field"</p>
                 </div>
             </section>
